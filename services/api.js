@@ -65,8 +65,8 @@ export const register = async (name, email, password) => {
 };
 
 // Safe Space API calls
-export const getPosts = async () => {
-  const response = await api.get('/safespace/posts');
+export const getPosts = async (page = 1, limit = 10) => {
+  const response = await api.get(`/safespace/posts?page=${page}&limit=${limit}`);
   return response.data;
 };
 
@@ -91,8 +91,16 @@ export const deletePost = async (id) => {
 };
 
 export const likePost = async (id) => {
-  const response = await api.put(`/safespace/posts/${id}/like`);
-  return response.data;
+  try {
+    console.log(`Liking post ${id}`);
+    const response = await api.put(`/safespace/posts/${id}/like`);
+    console.log('Like response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error liking post:', error);
+    console.error('Error response:', error.response?.data);
+    throw new Error(error.response?.data?.message || 'Failed to like post. Please try again later.');
+  }
 };
 
 // Add comment to a post
@@ -114,7 +122,7 @@ export const addComment = async (postId, content) => {
     }
   } catch (error) {
     console.error('Error adding comment:', error);
-    console.error('Error response:', error.response);
+    console.error('Error response:', error.response?.data);
     throw new Error(error.response?.data?.message || 'Failed to add comment. Please try again later.');
   }
 };
@@ -124,17 +132,28 @@ export const deleteComment = async (postId, commentId) => {
   return response.data;
 };
 
-export const getBookmarkedPosts = async () => {
-  const response = await api.get('/safespace/bookmarks');
+export const getBookmarkedPosts = async (page = 1, limit = 10) => {
+  const response = await api.get(`/safespace/bookmarks?page=${page}&limit=${limit}`);
   return response.data;
 };
 
 export const toggleBookmark = async (postId) => {
-  const response = await api.put(`/safespace/posts/${postId}/bookmark`);
-  return response.data;
+  try {
+    console.log(`Toggling bookmark for post ${postId}`);
+    const response = await api.put(`/safespace/posts/${postId}/bookmark`);
+    console.log('Bookmark response:', response.data);
+    return response.data;
+  } catch (error) {
+    console.error('Error toggling bookmark:', error);
+    console.error('Error response:', error.response?.data);
+    throw new Error(error.response?.data?.message || 'Failed to bookmark post. Please try again later.');
+  }
 };
 
 export default api;
+
+
+
 
 
 

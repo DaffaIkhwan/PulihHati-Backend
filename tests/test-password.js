@@ -1,4 +1,4 @@
-const User = require('./models/User');
+const User = require('../models/User');
 
 async function testPasswordCompare() {
   console.log('Available User methods:', Object.getOwnPropertyNames(User));

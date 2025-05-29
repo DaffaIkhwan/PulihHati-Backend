@@ -28,4 +28,7 @@ router.post(
 // Get current user
 router.get('/me', protect, authController.getMe);
 
+// Update current user profile
+router.put('/profile', protect, authController.updateProfile);
+
 module.exports = router;

@@ -6,6 +6,9 @@ const userController = require('../controllers/userController');
 // Get all users - admin only
 router.get('/', protect, authorize('admin'), userController.getUsers);
 
+// Update current user profile
+router.put('/profile', protect, userController.updateProfile);
+
 // Get user by ID
 router.get('/:id', protect, userController.getUserById);
 

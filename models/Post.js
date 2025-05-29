@@ -24,14 +24,14 @@ class Post {
     }
   }
 
-  // Find all posts with comments and likes
+  // Find all posts with comments and likes - OPTIMIZED VERSION
   static async findAll() {
     const client = await getClient();
     try {
-      logger.info('Finding all posts');
+      logger.info('Finding all posts with optimized query');
       
-      // Query untuk mendapatkan semua post beserta informasi author
-      const result = await client.query(`
+      // Get all posts in a single query
+      const postsResult = await client.query(`
         SELECT 
           p.id, 
           p.content, 
@@ -131,11 +131,12 @@ class Post {
 
   // Get bookmarked posts
   static async getBookmarkedPosts(userId) {
+    const client = await getClient();
     try {
       logger.info(`Finding bookmarked posts for user ${userId}`);
       
-      // Gunakan schema pulihhati (bukan pulihHati)
-      const result = await pool.query(`
+      // Perbaiki schema menjadi "pulihHati" (dengan H kapital) untuk konsistensi
+      const result = await client.query(`
         SELECT 
           p.id, 
           p.content, 
@@ -145,11 +146,11 @@ class Post {
           u.name as author_name,
           u.avatar as author_avatar
         FROM 
-          pulihhati.posts p
+          "pulihHati".posts p
         JOIN 
-          pulihhati.bookmarks b ON p.id = b.post_id
+          "pulihHati".bookmarks b ON p.id = b.post_id
         LEFT JOIN 
-          pulihhati.users u ON p.author_id = u.id
+          "pulihHati".users u ON p.author_id = u.id
         WHERE 
           b.user_id = $1
         ORDER BY 
@@ -158,11 +159,32 @@ class Post {
       
       logger.info(`Found ${result.rows.length} bookmarked posts for user ${userId}`);
       
-      return result.rows;
+      // Format posts untuk frontend
+      const formattedPosts = result.rows.map(post => ({
+        _id: post.id,
+        id: post.id,
+        content: post.content,
+        created_at: post.created_at,
+        updated_at: post.updated_at,
+        author: {
+          _id: post.author_id,
+          id: post.author_id,
+          name: post.author_name || 'Anonymous',
+          avatar: post.author_avatar || 'default-avatar.jpg'
+        },
+        likes: [],
+        comments: [],
+        likes_count: 0,
+        comments_count: 0
+      }));
+      
+      return formattedPosts;
     } catch (error) {
       logger.error(`Error in Post.getBookmarkedPosts: ${error.message}`);
       logger.error(`Stack trace: ${error.stack}`);
       return [];
+    } finally {
+      client.release();
     }
   }
 

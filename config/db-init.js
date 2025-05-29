@@ -60,7 +60,30 @@ const createTables = async () => {
       )
     `);
     
-    // Buat tabel bookmarks
+    // Buat tabel post_likes jika belum ada
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS "pulihHati".post_likes (
+        id SERIAL PRIMARY KEY,
+        post_id INTEGER REFERENCES "pulihHati".posts(id) ON DELETE CASCADE,
+        user_id INTEGER REFERENCES "pulihHati".users(id) ON DELETE CASCADE,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        UNIQUE(post_id, user_id)
+      )
+    `);
+
+    // Buat tabel post_comments jika belum ada
+    await pool.query(`
+      CREATE TABLE IF NOT EXISTS "pulihHati".post_comments (
+        id SERIAL PRIMARY KEY,
+        post_id INTEGER NOT NULL REFERENCES "pulihHati".posts(id) ON DELETE CASCADE,
+        author_id INTEGER NOT NULL REFERENCES "pulihHati".users(id) ON DELETE CASCADE,
+        content TEXT NOT NULL,
+        created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+        updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+      )
+    `);
+
+    // Buat tabel bookmarks jika belum ada
     await pool.query(`
       CREATE TABLE IF NOT EXISTS "pulihHati".bookmarks (
         id SERIAL PRIMARY KEY,
@@ -140,6 +163,7 @@ const createTables = async () => {
 };
 
 module.exports = { createTables };
+
 
 
 

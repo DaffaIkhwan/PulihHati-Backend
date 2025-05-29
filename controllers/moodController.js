@@ -1,0 +1,286 @@
+const Mood = require('../models/Mood');
+const logger = require('../config/logger');
+
+// Mood types configuration
+const MOOD_TYPES = {
+  1: { emoji: '😢', label: 'Sedih' },
+  2: { emoji: '😟', label: 'Cemas' },
+  3: { emoji: '😐', label: 'Netral' },
+  4: { emoji: '😊', label: 'Senang' },
+  5: { emoji: '😄', label: 'Sangat Bahagia' }
+};
+
+// @desc    Save or update mood entry
+// @route   POST /api/mood/entry
+// @access  Private
+exports.saveMoodEntry = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { mood_level, entry_date } = req.body;
+
+    // Validation
+    if (!mood_level || mood_level < 1 || mood_level > 5) {
+      return res.status(400).json({
+        message: 'Mood level harus antara 1-5'
+      });
+    }
+
+    // Get mood type info
+    const moodType = MOOD_TYPES[mood_level];
+    if (!moodType) {
+      return res.status(400).json({
+        message: 'Mood level tidak valid'
+      });
+    }
+
+    // Use today's date if not provided (using local timezone)
+    let targetDate = entry_date;
+    if (!targetDate) {
+      const now = new Date();
+      // Get local date in YYYY-MM-DD format
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+      targetDate = `${year}-${month}-${day}`;
+    }
+
+    // Get day info for debugging
+    const date = new Date(targetDate);
+    const dayIndex = date.getDay();
+    const dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+    const dayName = dayNames[dayIndex];
+
+    // Validate date format
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(targetDate)) {
+      return res.status(400).json({
+        message: 'Format tanggal tidak valid (YYYY-MM-DD)'
+      });
+    }
+
+    logger.info(`Saving mood entry for user ${userId}: level ${mood_level} on ${targetDate} (${dayName}, day index: ${dayIndex})`);
+
+    const moodData = {
+      mood_level: parseInt(mood_level),
+      mood_label: moodType.label,
+      mood_emoji: moodType.emoji,
+      entry_date: targetDate
+    };
+
+    const savedMood = await Mood.createOrUpdate(userId, moodData);
+
+    res.status(200).json({
+      message: 'Mood berhasil disimpan',
+      data: savedMood
+    });
+
+  } catch (error) {
+    logger.error(`Error saving mood entry: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal menyimpan mood',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Get mood history for last 7 days
+// @route   GET /api/mood/history/week
+// @access  Private
+exports.getWeeklyMoodHistory = async (req, res) => {
+  try {
+    const userId = req.user.id;
+
+    logger.info(`Fetching weekly mood history for user ${userId}`);
+
+    const moodEntries = await Mood.getLast7DaysMood(userId);
+    const formattedData = Mood.formatMoodForChart(moodEntries);
+
+    res.status(200).json({
+      message: 'Data mood 7 hari terakhir berhasil diambil',
+      data: formattedData,
+      raw_entries: moodEntries
+    });
+
+  } catch (error) {
+    logger.error(`Error fetching weekly mood history: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal mengambil data mood',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Get mood history for custom date range
+// @route   GET /api/mood/history
+// @access  Private
+exports.getMoodHistory = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { start_date, end_date } = req.query;
+
+    // Default to last 30 days if no dates provided
+    const endDate = end_date || new Date().toISOString().split('T')[0];
+    const startDate = start_date || new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+
+    logger.info(`Fetching mood history for user ${userId} from ${startDate} to ${endDate}`);
+
+    const moodEntries = await Mood.getUserMoodHistory(userId, startDate, endDate);
+
+    res.status(200).json({
+      message: 'Data mood berhasil diambil',
+      data: moodEntries,
+      period: {
+        start_date: startDate,
+        end_date: endDate
+      }
+    });
+
+  } catch (error) {
+    logger.error(`Error fetching mood history: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal mengambil data mood',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Get mood statistics
+// @route   GET /api/mood/stats
+// @access  Private
+exports.getMoodStats = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const { start_date, end_date } = req.query;
+
+    // Default to last 30 days if no dates provided
+    const endDate = end_date || new Date().toISOString().split('T')[0];
+    const startDate = start_date || new Date(Date.now() - 30 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+
+    logger.info(`Fetching mood statistics for user ${userId} from ${startDate} to ${endDate}`);
+
+    const stats = await Mood.getMoodStats(userId, startDate, endDate);
+
+    res.status(200).json({
+      message: 'Statistik mood berhasil diambil',
+      data: stats,
+      period: {
+        start_date: startDate,
+        end_date: endDate
+      }
+    });
+
+  } catch (error) {
+    logger.error(`Error fetching mood statistics: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal mengambil statistik mood',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Get today's mood
+// @route   GET /api/mood/today
+// @access  Private
+exports.getTodayMood = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const today = new Date().toISOString().split('T')[0];
+
+    logger.info(`Fetching today's mood for user ${userId}`);
+
+    const todayMood = await Mood.getMoodByDate(userId, today);
+
+    res.status(200).json({
+      message: 'Data mood hari ini berhasil diambil',
+      data: todayMood,
+      date: today
+    });
+
+  } catch (error) {
+    logger.error(`Error fetching today's mood: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal mengambil mood hari ini',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Delete mood entry
+// @route   DELETE /api/mood/entry/:id
+// @access  Private
+exports.deleteMoodEntry = async (req, res) => {
+  try {
+    const userId = req.user.id;
+    const entryId = req.params.id;
+
+    logger.info(`Deleting mood entry ${entryId} for user ${userId}`);
+
+    const deletedMood = await Mood.deleteMoodEntry(userId, entryId);
+
+    res.status(200).json({
+      message: 'Mood entry berhasil dihapus',
+      data: deletedMood
+    });
+
+  } catch (error) {
+    logger.error(`Error deleting mood entry: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal menghapus mood entry',
+      error: error.message
+    });
+  }
+};
+
+// @desc    Get mood types
+// @route   GET /api/mood/types
+// @access  Public
+exports.getMoodTypes = async (req, res) => {
+  try {
+    logger.info('Fetching mood types');
+
+    // Return hardcoded mood types for consistency
+    const moodTypes = Object.entries(MOOD_TYPES).map(([id, data]) => ({
+      id: parseInt(id),
+      emoji: data.emoji,
+      label: data.label,
+      color: getMoodColor(parseInt(id)),
+      chartColor: getMoodChartColor(parseInt(id))
+    }));
+
+    res.status(200).json({
+      message: 'Mood types berhasil diambil',
+      data: moodTypes
+    });
+
+  } catch (error) {
+    logger.error(`Error fetching mood types: ${error.message}`);
+    res.status(500).json({
+      message: 'Gagal mengambil mood types',
+      error: error.message
+    });
+  }
+};
+
+// Helper functions
+const getMoodColor = (moodLevel) => {
+  const colors = {
+    1: 'bg-blue-100 text-blue-700 border-blue-300',
+    2: 'bg-yellow-100 text-yellow-700 border-yellow-300',
+    3: 'bg-gray-100 text-gray-700 border-gray-300',
+    4: 'bg-green-100 text-green-700 border-green-300',
+    5: 'bg-pink-100 text-pink-700 border-pink-300'
+  };
+  return colors[moodLevel] || colors[3];
+};
+
+const getMoodChartColor = (moodLevel) => {
+  const colors = {
+    1: '#3B82F6',
+    2: '#F59E0B',
+    3: '#6B7280',
+    4: '#10B981',
+    5: '#EC4899'
+  };
+  return colors[moodLevel] || colors[3];
+};
+
+module.exports = exports;

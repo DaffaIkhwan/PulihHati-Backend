@@ -1,5 +1,5 @@
-const User = require('./models/User');
-const authController = require('./controllers/authController');
+const User = require('../models/User');
+const authController = require('../controllers/authController');
 
 // Melihat isi dari authController
 console.log('Auth controller login function:');

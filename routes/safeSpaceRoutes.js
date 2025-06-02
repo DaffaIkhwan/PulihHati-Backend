@@ -14,6 +14,12 @@ router.post('/posts', protect, safeSpaceController.createPost);
 // Get a single post by ID
 router.get('/posts/:id', protect, safeSpaceController.getPostById);
 
+// Update a post
+router.put('/posts/:id', protect, safeSpaceController.updatePost);
+
+// Delete a post
+router.delete('/posts/:id', protect, safeSpaceController.deletePost);
+
 // Like a post
 router.put('/posts/:id/like', protect, safeSpaceController.likePost);
 

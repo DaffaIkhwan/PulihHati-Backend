@@ -796,6 +796,201 @@ exports.getBookmarkedPosts = async (req, res) => {
   }
 };
 
+// @desc    Update a post
+// @route   PUT /api/safespace/posts/:id
+// @access  Private
+exports.updatePost = async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const userId = req.user.id;
+    const { content } = req.body;
+
+    // Validate postId
+    if (!postId || postId === 'undefined' || isNaN(parseInt(postId))) {
+      logger.error(`Invalid post ID received: ${postId}`);
+      return res.status(400).json({ message: 'Invalid post ID provided' });
+    }
+
+    if (!content || !content.trim()) {
+      return res.status(400).json({ message: 'Content is required' });
+    }
+
+    logger.info(`User ${userId} updating post ${postId}`);
+
+    const result = await transaction(async (client) => {
+      // Check if post exists and verify ownership
+      const postCheck = await client.query(`
+        SELECT id, author_id, content FROM "pulihHati".posts WHERE id = $1
+      `, [postId]);
+
+      if (postCheck.rows.length === 0) {
+        throw new Error('Post not found');
+      }
+
+      const post = postCheck.rows[0];
+
+      // Check if user is the author of the post
+      if (post.author_id !== userId) {
+        throw new Error('Not authorized to edit this post');
+      }
+
+      // Update the post
+      const updateResult = await client.query(`
+        UPDATE "pulihHati".posts
+        SET content = $1, updated_at = NOW()
+        WHERE id = $2
+        RETURNING id, content, author_id, created_at, updated_at
+      `, [content.trim(), postId]);
+
+      const updatedPost = updateResult.rows[0];
+
+      // Get author info
+      const userResult = await client.query(`
+        SELECT name, avatar FROM "pulihHati".users WHERE id = $1
+      `, [userId]);
+
+      const user = userResult.rows[0] || { name: 'Anonymous', avatar: '/static/default-avatar.svg' };
+
+      // Get likes count
+      const likesResult = await client.query(`
+        SELECT COUNT(*) as count FROM "pulihHati".post_likes WHERE post_id = $1
+      `, [postId]);
+
+      // Get comments count
+      const commentsResult = await client.query(`
+        SELECT COUNT(*) as count FROM "pulihHati".post_comments WHERE post_id = $1
+      `, [postId]);
+
+      // Check if current user liked this post
+      const userLikeResult = await client.query(`
+        SELECT id FROM "pulihHati".post_likes WHERE post_id = $1 AND user_id = $2
+      `, [postId, userId]);
+
+      // Check if current user bookmarked this post
+      const userBookmarkResult = await client.query(`
+        SELECT id FROM "pulihHati".bookmarks WHERE post_id = $1 AND user_id = $2
+      `, [postId, userId]);
+
+      // Format post for frontend
+      return {
+        _id: updatedPost.id,
+        id: updatedPost.id,
+        content: updatedPost.content,
+        created_at: updatedPost.created_at,
+        updated_at: updatedPost.updated_at,
+        author: {
+          _id: userId,
+          id: userId,
+          name: user.name,
+          avatar: user.avatar
+        },
+        likes: [],
+        comments: [],
+        likes_count: parseInt(likesResult.rows[0].count),
+        comments_count: parseInt(commentsResult.rows[0].count),
+        bookmarked: userBookmarkResult.rows.length > 0,
+        liked: userLikeResult.rows.length > 0
+      };
+    });
+
+    logger.info(`Post ${postId} updated successfully by user ${userId}`);
+    return res.status(200).json(result);
+  } catch (error) {
+    logger.error(`Error updating post: ${error.message}`);
+    logger.error(`Stack trace: ${error.stack}`);
+
+    if (error.message === 'Post not found') {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+
+    if (error.message === 'Not authorized to edit this post') {
+      return res.status(403).json({ message: 'Not authorized to edit this post' });
+    }
+
+    return res.status(500).json({ message: 'Failed to update post. Please try again.' });
+  }
+};
+
+// @desc    Delete a post
+// @route   DELETE /api/safespace/posts/:id
+// @access  Private
+exports.deletePost = async (req, res) => {
+  try {
+    const postId = req.params.id;
+    const userId = req.user.id;
+
+    // Validate postId
+    if (!postId || postId === 'undefined' || isNaN(parseInt(postId))) {
+      logger.error(`Invalid post ID received: ${postId}`);
+      return res.status(400).json({ message: 'Invalid post ID provided' });
+    }
+
+    logger.info(`User ${userId} attempting to delete post ${postId}`);
+
+    const result = await transaction(async (client) => {
+      // Check if post exists and verify ownership
+      const postCheck = await client.query(`
+        SELECT id, author_id FROM "pulihHati".posts WHERE id = $1
+      `, [postId]);
+
+      if (postCheck.rows.length === 0) {
+        throw new Error('Post not found');
+      }
+
+      const post = postCheck.rows[0];
+
+      // Check if user is the author of the post
+      if (post.author_id !== userId) {
+        throw new Error('Not authorized to delete this post');
+      }
+
+      // Delete related data first (foreign key constraints)
+      // Delete comments
+      await client.query(`
+        DELETE FROM "pulihHati".post_comments WHERE post_id = $1
+      `, [postId]);
+
+      // Delete likes
+      await client.query(`
+        DELETE FROM "pulihHati".post_likes WHERE post_id = $1
+      `, [postId]);
+
+      // Delete bookmarks
+      await client.query(`
+        DELETE FROM "pulihHati".bookmarks WHERE post_id = $1
+      `, [postId]);
+
+      // Delete notifications related to this post
+      await client.query(`
+        DELETE FROM "pulihHati".notifications WHERE post_id = $1
+      `, [postId]);
+
+      // Finally delete the post
+      await client.query(`
+        DELETE FROM "pulihHati".posts WHERE id = $1
+      `, [postId]);
+
+      return { success: true };
+    });
+
+    logger.info(`Post ${postId} deleted successfully by user ${userId}`);
+    return res.status(200).json({ message: 'Post deleted successfully' });
+  } catch (error) {
+    logger.error(`Error deleting post: ${error.message}`);
+    logger.error(`Stack trace: ${error.stack}`);
+
+    if (error.message === 'Post not found') {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+
+    if (error.message === 'Not authorized to delete this post') {
+      return res.status(403).json({ message: 'Not authorized to delete this post' });
+    }
+
+    return res.status(500).json({ message: 'Failed to delete post. Please try again.' });
+  }
+};
+
 // @desc    Update user profile (name, email, avatar)
 // @route   PUT /api/safespace/profile
 // @access  Private

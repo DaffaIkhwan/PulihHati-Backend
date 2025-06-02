@@ -962,3 +962,12 @@
 {"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-05-29 20:26:11"}
 {"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-05-29 20:27:22"}
 {"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-05-29 20:28:25"}
+{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
+{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
+{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:47"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:56"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
+{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
+{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:865:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:820:20)","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
+{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:34"}

@@ -13925,3 +13925,9 @@
 {"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
 {"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
 {"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:44"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}

@@ -962,9 +962,12 @@
 {"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-05-29 20:26:11"}
 {"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-05-29 20:27:22"}
 {"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-05-29 20:28:25"}
+<<<<<<< HEAD
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:27"}
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-01 14:05:41"}
 {"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:00:31"}
 {"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:00:34"}
 {"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:01:44"}
 {"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:29"}
+=======
+>>>>>>> a8e8d2fafdf25f3c9170e6ce3412b6fc42fe4bfe

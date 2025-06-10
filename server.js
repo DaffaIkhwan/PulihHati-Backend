@@ -1,4 +1,5 @@
 require('dotenv').config();
+const axios = require('axios');
 const app = require('./app');
 const logger = require('./config/logger');
 const { query, closePool, checkHealth } = require('./config/db');
@@ -20,6 +21,23 @@ app.get('/health', async (req, res) => {
       uptime: process.uptime(),
       timestamp: new Date().toISOString()
     });
+  }
+});
+
+// Proxy ke chatbot Flask
+app.post('/api/chatbot', async (req, res) => {
+  const userMessage = req.body.message;
+
+  try {
+    const response = await axios.post(
+      'https://8ead-34-125-160-61.ngrok-free.app/chat',  // ganti jika URL ngrok kamu berubah
+      { message: userMessage }
+    );
+
+    res.json({ reply: response.data.response });
+  } catch (error) {
+    logger.error(`Gagal menghubungi chatbot Flask: ${error.message}`);
+    res.status(500).json({ error: 'Gagal menghubungi chatbot Flask.' });
   }
 });
 

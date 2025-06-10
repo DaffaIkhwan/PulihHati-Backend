@@ -13615,976 +13615,322 @@
 {"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-05-29 20:28:23"}
 {"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-29 20:28:25"}
 {"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-05-29 20:28:25"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:27"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:27"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:27"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:29"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:29"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-05-29 20:31:29"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:52"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:53"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:53"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:33:54"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:01"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:02"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:02"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:02"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:02"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:05"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:05"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:05"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:06"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:06"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:08"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:08"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:08"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:09"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:10"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:10"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:16"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:17"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:34:25"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:25"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:25"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:25"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:25"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:38"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:38"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:40"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Date range: 2025-05-23 to 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:52"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-29","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"0":{"date":"2025-05-23","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"4":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:54"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:56"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:56"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:56"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-29 20:35:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"User 3 updating profile via safespace endpoint","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Received update request - name: \"daffa coba\", email: \"daffaganteng@gmail.com\"","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Name will be updated to: \"daffa coba\"","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Email will be updated to: \"daffaganteng@gmail.com\"","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"email":"daffaganteng@gmail.com","level":"info","message":"Updating profile for user 3 with fields:","name":"daffa coba","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"email":"daffaganteng@gmail.com","level":"info","message":"Updating user 3 with data:","name":"daffa coba","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Adding name update: daffa coba","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Adding email update: daffaganteng@gmail.com","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Update fields: name = $1, email = $2, updated_at = NOW()","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"0":"daffa coba","1":"daffaganteng@gmail.com","2":3,"level":"info","message":"Update values:","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"WHERE parameter index: $3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"level":"info","message":"Executing query: UPDATE \"pulihHati\".users\n         SET name = $1, email = $2, updated_at = NOW()\n         WHERE id = $3\n         RETURNING id, name, email, avatar, role, created_at, updated_at, cloudinary_public_id","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:05"}
-{"avatar":"https://res.cloudinary.com/dzrd37naa/image/upload/c_fill,f_auto,g_face,h_300,q_auto,w_300/v1/pulih-hati/avatars/user_3_1748239892720?_a=BAMClqRg0","cloudinary_public_id":"pulih-hati/avatars/user_3_1748239892720","created_at":"2025-05-24T22:50:22.494Z","email":"daffaganteng@gmail.com","id":3,"level":"info","message":"User 3 updated successfully:","name":"daffa coba","role":"user","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:06","updated_at":"2025-05-29T06:36:08.747Z"}
-{"level":"info","message":"Profile updated successfully for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:07"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:12"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:12"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:12"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:13"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:13"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:13"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:13"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:14"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:14"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:14"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:20"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:20"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:21"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:21"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:21"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:21"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:22"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:28"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:28"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:29"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:29"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-29 20:36:35"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:51"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:51"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:51"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:56"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:56"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-05-30 20:28:56"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-30 20:29:51"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-30 20:29:51"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-30 20:29:51"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-05-30 20:29:51"}
-{"level":"info","message":"Finding user by email: daffaganteng@gmail.com","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:12"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:13"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:13"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:14"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:15"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:15"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:15"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:15"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:21"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:23"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:23"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:23"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:23"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:24"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:24"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:32"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:32"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:32"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:32"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:32"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:37"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:37"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:37"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:38"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:38"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:38"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:40"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:41"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:42"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:50"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:50"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:50"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:50"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:50"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:30:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:11"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:13"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:13"}
-{"level":"info","message":"User 3 liking post 17","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:13"}
-{"level":"info","message":"User 3 liked post 17","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:14"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:26"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:26"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:26"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:27"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:27"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:27"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:27"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:27"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:28"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:28"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:29"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:29"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:29"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:38"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:38"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:38"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:38"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:39"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:39"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:40"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:31:48"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:48"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:48"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:49"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:49"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:49"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:50"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:50"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:50"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:50"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:58"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:59"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:59"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:59"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:32:59"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:01"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:01"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:06"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:06"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:06"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Found 1 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:07"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"warn","message":"❌ No entry found for today: 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Formatting mood chart data. Received 1 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Saving mood entry for user 3: level 5 on 2025-05-30 (Jumat, day index: 5)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Creating/updating mood entry for user 3 on 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:15"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:16"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:16"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:16"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:16"}
-{"level":"info","message":"Mood entry saved successfully for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:16"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:23"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"✅ Today's entry exists: 2025-05-30 - Level 5","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:24"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Date range: 2025-05-24 to 2025-05-30","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"✅ Today's entry exists: 2025-05-30 - Level 5","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"0":{"date":"2025-05-24","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-25","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"3":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:25"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:29"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:30"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:30"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:32"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:32"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:32"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:32"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:34"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"User 3 updating profile via safespace endpoint","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Received update request - name: \"daffa ganteng\", email: \"daffaganteng@gmail.com\"","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Name will be updated to: \"daffa ganteng\"","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Email will be updated to: \"daffaganteng@gmail.com\"","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"email":"daffaganteng@gmail.com","level":"info","message":"Updating profile for user 3 with fields:","name":"daffa ganteng","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"email":"daffaganteng@gmail.com","level":"info","message":"Updating user 3 with data:","name":"daffa ganteng","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Adding name update: daffa ganteng","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Adding email update: daffaganteng@gmail.com","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Update fields: name = $1, email = $2, updated_at = NOW()","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"0":"daffa ganteng","1":"daffaganteng@gmail.com","2":3,"level":"info","message":"Update values:","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"WHERE parameter index: $3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"level":"info","message":"Executing query: UPDATE \"pulihHati\".users\n         SET name = $1, email = $2, updated_at = NOW()\n         WHERE id = $3\n         RETURNING id, name, email, avatar, role, created_at, updated_at, cloudinary_public_id","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43"}
-{"avatar":"https://res.cloudinary.com/dzrd37naa/image/upload/c_fill,f_auto,g_face,h_300,q_auto,w_300/v1/pulih-hati/avatars/user_3_1748239892720?_a=BAMClqRg0","cloudinary_public_id":"pulih-hati/avatars/user_3_1748239892720","created_at":"2025-05-24T22:50:22.494Z","email":"daffaganteng@gmail.com","id":3,"level":"info","message":"User 3 updated successfully:","name":"daffa ganteng","role":"user","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:43","updated_at":"2025-05-30T06:33:46.269Z"}
-{"level":"info","message":"Profile updated successfully for user 3","service":"pulih-hati-backend","timestamp":"2025-05-30 20:33:45"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 18:00:58"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 18:00:58"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 18:00:58"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 18:01:00"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-01 18:01:01"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-01 18:01:01"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:13"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:13"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:13"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:13"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:30"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:31"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:47"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:48"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:49"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:55"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:55"}
-{"level":"warn","message":"❌ No entry found for today: 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:07:58"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Saving mood entry for user 3: level 5 on 2025-06-01 (Minggu, day index: 0)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Creating/updating mood entry for user 3 on 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"warn","message":"❌ No entry found for today: 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:03"}
-{"level":"info","message":"Mood entry saved successfully for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:04"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:04"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 18:08:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:43:58"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 18:43:59"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:43:59"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:43:59"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:00"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:00"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:01"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:01"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:02"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:05"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:05"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:05"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:06"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:07"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:13"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:16"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:16"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:17"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:17"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:17"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:17"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:22"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:22"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:22"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:26"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:31"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:32"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:32"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:32"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:32"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:36"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:37"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:37"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:37"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:37"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 18:44:41"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:18"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:18"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:20"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:21"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:21"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:21"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:21"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:29"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:36"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:36"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:36"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:36"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:36"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:29:37"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:38"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:38"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:39"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:39"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:39"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:40"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:47"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:47"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:47"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:30:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:36"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:36"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:38"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:39"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:39"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:39"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:39"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:46"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:47"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:47"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:34:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:14"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:14"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:15"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:16"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:23"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:55"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:55"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:55"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:35:55"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:09"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:09"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:10"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:11"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:18"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:19"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:19"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:19"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:19"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:19"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:25"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:25"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:25"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:25"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:25"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"Saving mood entry for user 3: level 5 on 2025-06-01 (Minggu, day index: 0)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"Creating/updating mood entry for user 3 on 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"Mood entry saved successfully for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:26"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:36:27"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:39:42"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:39:42"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:39:42"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:39:42"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:43"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:45"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:45"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:45"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:45"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:46"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:46"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:46"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:46"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:47"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:48"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:55"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:56"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:56"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:44:58"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:03"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:04"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:05"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:12"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:12"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:12"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:12"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:13"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:20"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:21"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:22"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:23"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:30"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:30"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:30"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:30"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:31"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:32"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:32"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:32"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:32"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:39"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:39"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:39"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:39"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:49"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:50"}
-{"level":"info","message":"Found 3 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:51"}
-{"level":"info","message":"Mood entry found: 2025-05-25 - Level 4 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:51"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:51"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:51"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:55"}
-{"level":"info","message":"✅ Today's entry exists: 2025-06-01 - Level 5","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:56"}
-{"level":"info","message":"Formatting mood chart data. Received 3 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:56"}
-{"0":{"date":"2025-05-26","day":"Sen","emoji":"😊","hasEntry":true,"label":"Senang","mood":4},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 20:45:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:28"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:28"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:28"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:29"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:30"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"Date range: 2025-05-27 to 2025-06-02","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:31"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:32"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:39"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:39"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:39"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:39"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:40"}
-{"level":"warn","message":"❌ No entry found for today: 2025-06-02","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:41"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:41"}
-{"0":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"4":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"6":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:41"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:41"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:48"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:48"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Fetching weekly mood history for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Fetching last 7 days mood data for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Date range: 2025-05-27 to 2025-06-02","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Found 2 mood entries in last 7 days for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Mood entry found: 2025-05-29 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Mood entry found: 2025-05-31 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:50"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:56"}
-{"level":"warn","message":"❌ No entry found for today: 2025-06-02","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:56"}
-{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:56"}
-{"0":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-30","day":"Jum","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"4":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-01","day":"Min","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"6":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:56"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:57"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 16:58:57"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 16:59:03"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:00"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:01"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:02"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:02"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:04"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:04"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:04"}
-{"level":"info","message":"Fetching profile stats for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:04"}
-{"bookmarks":4,"comments":18,"level":"info","message":"Profile stats fetched successfully for user 3:","posts":16,"service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:06"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:08"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:08"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:08"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:08"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:08"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:09"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:10"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:18"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:19"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:19"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:19"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:00:27"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:47"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:47"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:48"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:49"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:50"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:50"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:57"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:57"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:17:58"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:18:06"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:15"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:15"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:15"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:17"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:17"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:17"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:26"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:36"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:36"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:36"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:38"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:38"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-02 17:20:38"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:18"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:18"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:18"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:20"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:21"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:21"}
-{"level":"info","message":"Finding user by email: daffaganteng@gmail.com","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:28"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:28"}
-{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
-{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
-{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:21:29"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:02"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:02"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:02"}
-{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:02"}
-{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:10"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:10"}
-{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:10"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:12"}
-{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:12"}
-{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:12"}
-{"level":"info","message":"Finding user by email: test@example.com","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:41"}
-{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:42"}
-{"level":"info","message":"No user found with email: test@example.com","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:43"}
-{"level":"info","message":"Finding user by email: test@example.com","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:43"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:44"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:44"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:44"}
-{"level":"info","message":"Creating post with content: This is a test post for edit/d...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:44"}
-{"level":"info","message":"Post created successfully with ID: 18","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:45"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:45"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:45"}
-{"level":"info","message":"User 6 updating post 18","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:45"}
-{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:47"}
-{"level":"info","message":"Retrying transaction (1/3) after 6000ms...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:48"}
-{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:56"}
-{"level":"info","message":"Retrying transaction (2/3) after 12000ms...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:22:56"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:01"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:01"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:01"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:08"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:08"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:09"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:09"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:09"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:09"}
-{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
-{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
-{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:865:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:820:20)","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:11"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:12"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:12"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:19"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"User 6 attempting to delete post 18","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"Finding user by ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"Fetching notifications for user 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:20"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:21"}
-{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:21"}
-{"level":"info","message":"Post 18 deleted successfully by user 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:23"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:23"}
-{"level":"info","message":"User found with ID: 3","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:23"}
-{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:31"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:32"}
-{"level":"info","message":"Creating post with content: Post for validation test...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:32"}
-{"level":"info","message":"Post created successfully with ID: 19","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"info","message":"Finding user by ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"info","message":"User found with ID: 6","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"info","message":"User 6 updating post 99999","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:33"}
-{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:34"}
-{"level":"info","message":"Retrying transaction (1/3) after 6000ms...","service":"pulih-hati-backend","timestamp":"2025-06-02 17:23:34"}
+<<<<<<< HEAD
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:44"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:44"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:44"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:46"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:47"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:47"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:53"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:53"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:53"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:53"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:55"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:02:57"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:13"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:15"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:15"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:15"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:15"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:17"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:22"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:22"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:22"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:22"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:23"}
+{"level":"info","message":"Closing database pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:27"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:39"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:39"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:39"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:40"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:40"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:40"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:03:54"}
+{"level":"info","message":"Closing database pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 14:05:41"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:21"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:21"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:21"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:22"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:22"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-01 14:07:22"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:10:30"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:11:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:11:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:11:54"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-01 14:11:54"}
+{"level":"info","message":"Finding user by email: nuansadrive@gmail.com","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:17"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:18"}
+{"level":"info","message":"No user found with email: nuansadrive@gmail.com","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:18"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:19"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:20"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:26"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:26"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:26"}
+{"0":{"date":"2025-05-26","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:26"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:26"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:27"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:27"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:32"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:32"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"0":{"date":"2025-05-26","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:33"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:34"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:34"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:34"}
+{"level":"info","message":"Date range: 2025-05-26 to 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:34"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:34"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:35"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:35"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:41"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:41"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:41"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:41"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:41"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-01","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"0":{"date":"2025-05-26","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-27","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:42"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:43"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:47"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:49"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:49"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:49"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-01 14:12:55"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:33"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:33"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:33"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:37"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:37"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-03 19:52:37"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:11"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:11"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"Date range: 2025-05-28 to 2025-06-03","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:12"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:13"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-03","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"0":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:19"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:20"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:20"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:20"}
+{"level":"info","message":"Date range: 2025-05-28 to 2025-06-03","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:20"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:26"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:26"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-03","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:26"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:26"}
+{"0":{"date":"2025-05-28","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-05-29","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-05-30","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-05-31","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-03 19:55:26"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:00:31"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:00:34"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 500","service":"pulih-hati-backend","timestamp":"2025-06-03 20:01:44"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-07 20:14:49"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:14:49"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:14:49"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:06"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:06"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:06"}
+{"level":"warn","message":"No authorization token provided","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:19"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:42"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:42"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:43"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:44"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:46"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"Fetching profile stats for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:50"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:51"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:51"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:51"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:51"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:52"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:52"}
+{"bookmarks":0,"comments":0,"level":"info","message":"Profile stats fetched successfully for user 5:","posts":0,"service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:52"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:52"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:58"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:58"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:59"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:59"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:15:59"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"Fetching profile stats for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:00"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:01"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:01"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:01"}
+{"bookmarks":0,"comments":0,"level":"info","message":"Profile stats fetched successfully for user 5:","posts":0,"service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:03"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:09"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:10"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:11"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:11"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:12"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:12"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:17"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:18"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:19"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:26"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:29"}
+{"level":"info","message":"Retrying query (1/3) after 6000ms...","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:29"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:34"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:35"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:35"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:35"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:01"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:01"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:02"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:03"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:09"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:10"}
+{"level":"info","message":"Fetching weekly mood history for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:10"}
+{"level":"info","message":"Fetching last 7 days mood data for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:10"}
+{"level":"info","message":"Date range: 2025-06-01 to 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:10"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:16"}
+{"level":"info","message":"Found 0 mood entries in last 7 days for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:16"}
+{"level":"warn","message":"❌ No entry found for today: 2025-06-07","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:17"}
+{"level":"info","message":"Formatting mood chart data. Received 0 entries","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:17"}
+{"0":{"date":"2025-06-01","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-02","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-03","day":"Sel","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-04","day":"Rab","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"6":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-07 20:17:17"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:30"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:30"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:30"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:31"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:31"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:31"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:31"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:31"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:32"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:32"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:32"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:32"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:32"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:37"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:37"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"Finding user by ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"Fetching notifications for user 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"User found with ID: 5","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:38"}
+{"level":"info","message":"Returning 10 posts","service":"pulih-hati-backend","timestamp":"2025-06-07 20:19:44"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:16"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-07 20:51:19"}
+=======
+>>>>>>> a8e8d2fafdf25f3c9170e6ce3412b6fc42fe4bfe

@@ -7,7 +7,7 @@ const logger = require('../config/logger');
 class User {
   // Create a new user
   static async create(userData) {
-    const { name, email, password, avatar = 'default-avatar.jpg', role = 'user' } = userData;
+    const { name, email, password, avatar = null, role = 'user' } = userData;
 
     try {
       // Hash password

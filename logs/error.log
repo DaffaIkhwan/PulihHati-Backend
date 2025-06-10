@@ -971,3 +971,80 @@
 {"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-07 20:16:29"}
 =======
 >>>>>>> a8e8d2fafdf25f3c9170e6ce3412b6fc42fe4bfe
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-10 12:00:23"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 12:25:09"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 12:25:09"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 12:25:10"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"is_anonymous\" of relation \"posts\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:07"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"is_anonymous\" of relation \"posts\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:13"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"is_anonymous\" of relation \"posts\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:26"}
+{"level":"error","message":"Error creating post: column \"is_anonymous\" of relation \"posts\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:26"}
+{"level":"error","message":"Stack trace: error: column \"is_anonymous\" of relation \"posts\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:155:22\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.createPost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:153:18)","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:26"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-10 12:41:26"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-10 14:25:06"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 14:34:35"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 14:34:36"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 14:34:52"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 14:34:54"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 14:34:54"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-10 14:36:58"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 14:55:22"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 14:59:29"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-10 14:59:29"}
+{"level":"error","message":"Database query error (attempt 1/3): Connection terminated due to connection timeout","service":"pulih-hati-backend","timestamp":"2025-06-10 15:02:52"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-10 15:07:36"}
+{"level":"error","message":"Database query error (attempt 1/3): Connection terminated due to connection timeout","service":"pulih-hati-backend","timestamp":"2025-06-10 15:07:36"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:08:27"}
+{"level":"error","message":"Database query error (attempt 1/3): Connection terminated due to connection timeout","service":"pulih-hati-backend","timestamp":"2025-06-10 15:12:02"}
+{"level":"error","message":"Database query error (attempt 1/3): Connection terminated due to connection timeout","service":"pulih-hati-backend","timestamp":"2025-06-10 15:13:30"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:31:13"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:31:20"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:31:34"}
+{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:31:34"}
+{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:936:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:891:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:31:34"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:32:30"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-10 15:32:30"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:00"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:25"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:32"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:46"}
+{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:46"}
+{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1071:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1026:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:33:46"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:35:18"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:35:43"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:35:51"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:36:04"}
+{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:36:04"}
+{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1079:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1034:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:36:04"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:37:33"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:37:56"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:38:03"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:38:17"}
+{"level":"error","message":"Error updating post: column \"id\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-10 15:38:17"}
+{"level":"error","message":"Stack trace: error: column \"id\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:938:30\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:893:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:38:17"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:40:32"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 15:41:44"}
+{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:07"}
+{"level":"error","message":"Transaction error (attempt 2/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:13"}
+{"level":"error","message":"Transaction error (attempt 3/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:26"}
+{"level":"error","message":"Error updating post: Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:26"}
+{"level":"error","message":"Stack trace: Error: Post not found\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:900:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:893:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:26"}
+{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:29"}
+{"level":"error","message":"Transaction error (attempt 2/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:36"}
+{"level":"error","message":"Transaction error (attempt 3/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:48"}
+{"level":"error","message":"Error deleting post: Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:48"}
+{"level":"error","message":"Stack trace: Error: Post not found\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1010:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.deletePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1003:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:42:48"}
+{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:57:44"}
+{"level":"error","message":"Transaction error (attempt 2/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:57:51"}
+{"level":"error","message":"Transaction error (attempt 3/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:03"}
+{"level":"error","message":"Error updating post: Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:03"}
+{"level":"error","message":"Stack trace: Error: Post not found\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:900:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.updatePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:893:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:03"}
+{"level":"error","message":"Transaction error (attempt 1/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:04"}
+{"level":"error","message":"Transaction error (attempt 2/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:11"}
+{"level":"error","message":"Transaction error (attempt 3/3): Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:23"}
+{"level":"error","message":"Error deleting post: Post not found","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:23"}
+{"level":"error","message":"Stack trace: Error: Post not found\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1010:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.deletePost (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:1003:20)","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:23"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-10 15:58:24"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-10 16:14:46"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-10 16:55:28"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-10 16:55:28"}

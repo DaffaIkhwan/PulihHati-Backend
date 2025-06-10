@@ -9,10 +9,7 @@
     "test": "jest"
   },
   "dependencies": {
-<<<<<<< HEAD
     "axios": "^1.9.0",
-=======
->>>>>>> a8e8d2fafdf25f3c9170e6ce3412b6fc42fe4bfe
     "bcryptjs": "^2.4.3",
     "cloudinary": "^2.6.1",
     "compression": "^1.7.4",

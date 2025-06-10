@@ -3,16 +3,18 @@ const logger = require('../config/logger');
 
 class Post {
   // Create a new post
-  static async create({ content, author_id }) {
+  static async create({ content, author_id, is_anonymous }) {
     try {
       logger.info(`Creating post with content: ${content.substring(0, 30)}...`);
       
+      console.log('DEBUG isAnonymous dari FE:', is_anonymous, typeof is_anonymous);
+      
       // Gunakan schema pulihHati (dengan H kapital)
       const result = await pool.query(`
-        INSERT INTO "pulihHati".posts (content, author_id) 
-        VALUES ($1, $2) 
-        RETURNING id, content, author_id, created_at, updated_at
-      `, [content, author_id]);
+        INSERT INTO "pulihHati".posts (content, author_id, is_anonymous) 
+        VALUES ($1, $2, $3) 
+        RETURNING id, content, author_id, is_anonymous, created_at, updated_at
+      `, [content, author_id, is_anonymous]);
       
       logger.info(`Post created successfully with ID: ${result.rows[0].id}`);
       
@@ -36,6 +38,7 @@ class Post {
           p.id, 
           p.content, 
           p.author_id, 
+          p.is_anonymous,
           p.created_at, 
           p.updated_at,
           u.name as author_name,
@@ -50,10 +53,10 @@ class Post {
           p.created_at DESC
       `);
       
-      logger.info(`Found ${result.rows.length} posts`);
+      logger.info(`Found ${postsResult.rows.length} posts`);
       
       // Format posts untuk frontend
-      const posts = await Promise.all(result.rows.map(async post => {
+      const posts = await Promise.all(postsResult.rows.map(async post => {
         // Get likes for this post
         const likesResult = await client.query(`
           SELECT 
@@ -90,13 +93,14 @@ class Post {
           _id: post.id,
           id: post.id,
           content: post.content,
+          isAnonymous: post.is_anonymous,
           created_at: post.created_at,
           updated_at: post.updated_at,
           author: {
             _id: post.author_id,
             id: post.author_id,
             name: post.author_name || 'Anonymous',
-            avatar: post.author_avatar || 'default-avatar.jpg'
+            avatar: post.author_avatar || null
           },
           likes: likesResult.rows.map(like => ({
             user: like.user_id,
@@ -111,7 +115,7 @@ class Post {
               id: comment.author_id,
               _id: comment.author_id,
               name: comment.author_name || 'Anonymous',
-              avatar: comment.author_avatar || 'default-avatar.jpg'
+              avatar: comment.author_avatar || null
             }
           })),
           likes_count: parseInt(post.likes_count) || 0,
@@ -170,7 +174,7 @@ class Post {
           _id: post.author_id,
           id: post.author_id,
           name: post.author_name || 'Anonymous',
-          avatar: post.author_avatar || 'default-avatar.jpg'
+          avatar: post.author_avatar || null
         },
         likes: [],
         comments: [],
@@ -200,6 +204,7 @@ class Post {
           p.id, 
           p.content, 
           p.author_id, 
+          p.is_anonymous,
           p.created_at, 
           p.updated_at,
           u.name as author_name,
@@ -256,13 +261,14 @@ class Post {
         _id: post.id,
         id: post.id,
         content: post.content,
+        isAnonymous: post.is_anonymous,
         created_at: post.created_at,
         updated_at: post.updated_at,
         author: {
           _id: post.author_id,
           id: post.author_id,
           name: post.author_name || 'Anonymous',
-          avatar: post.author_avatar || 'default-avatar.jpg'
+          avatar: post.author_avatar || null
         },
         likes: likesResult.rows.map(like => ({
           user: like.user_id,
@@ -277,7 +283,7 @@ class Post {
             id: comment.author_id,
             _id: comment.author_id,
             name: comment.author_name || 'Anonymous',
-            avatar: comment.author_avatar || 'default-avatar.jpg'
+            avatar: comment.author_avatar || null
           }
         })),
         likes_count: likesResult.rows.length,
@@ -332,7 +338,7 @@ class Post {
         SELECT name, avatar FROM "pulihHati".users WHERE id = $1
       `, [userId]);
       
-      const user = userResult.rows[0] || { name: 'Anonymous', avatar: 'default-avatar.jpg' };
+      const user = userResult.rows[0] || { name: 'Anonymous', avatar: null };
       
       // Format comment
       const formattedComment = {

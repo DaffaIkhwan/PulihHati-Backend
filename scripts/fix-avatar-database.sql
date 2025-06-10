@@ -21,3 +21,23 @@ WHERE avatar IS NULL;
 
 -- 5. Show table structure
 \d "pulihHati".users;
+
+-- Update existing users with default avatar to NULL
+UPDATE "pulihHati".users
+SET avatar = NULL
+WHERE avatar = 'default-avatar.jpg';
+
+-- Update existing comments with default avatar to NULL
+UPDATE "pulihHati".post_comments
+SET author_avatar = NULL
+WHERE author_avatar = 'default-avatar.jpg';
+
+-- Update existing posts with default avatar to NULL
+UPDATE "pulihHati".posts
+SET author_avatar = NULL
+WHERE author_avatar = 'default-avatar.jpg';
+
+-- Update existing notifications with default avatar to NULL
+UPDATE "pulihHati".notifications
+SET actor_avatar = NULL
+WHERE actor_avatar = 'default-avatar.jpg';

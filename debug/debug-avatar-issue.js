@@ -101,8 +101,7 @@ testSpecificAvatarUrl = async (url) => {
   console.log('   - Check response.data.user.avatar value');
   console.log('');
   console.log('2. Check if avatar URL is valid:');
-  console.log('   - Should contain "cloudinary.com"');
-  console.log('   - Should not be "default-avatar.jpg"');
+  console.log('   - Should not be null');
   console.log('   - Should be accessible via direct URL');
   console.log('');
   console.log('3. Check if state is updating:');
@@ -138,7 +137,7 @@ if (typeof module !== 'undefined' && module.exports) {
 // Specific debugging for your issue
 console.log('\n🎯 Specific Issue Analysis:');
 console.log('You mentioned the debug shows:');
-console.log('  Avatar URL: https://res.cloudinary.com/dzrd37naa/image/upload/v1/pulih-hati/avatars/default-avatar.jpg');
+console.log('  Avatar URL: null');
 console.log('  Image Key: 1748204641747');
 console.log('');
 console.log('This suggests:');

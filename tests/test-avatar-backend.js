@@ -91,7 +91,7 @@ const testAvatarBackend = async () => {
         // Restore original avatar
         await query(`
           UPDATE "pulihHati".users 
-          SET avatar = 'default-avatar.jpg', cloudinary_public_id = NULL
+          SET avatar = NULL, cloudinary_public_id = NULL
           WHERE id = $1
         `, [testUserId]);
         console.log('✅ Restored original avatar');

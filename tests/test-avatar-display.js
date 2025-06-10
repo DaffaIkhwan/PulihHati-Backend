@@ -60,7 +60,7 @@ const testCurrentProfile = async () => {
       console.log('🖼️ Avatar URL analysis:');
       console.log('  - URL:', data.user.avatar);
       console.log('  - Is Cloudinary URL:', data.user.avatar.includes('cloudinary.com'));
-      console.log('  - Is default:', data.user.avatar === 'default-avatar.jpg');
+      console.log('  - Is default:', data.user.avatar === null);
       
       // Test if avatar URL is accessible
       try {
@@ -145,10 +145,10 @@ const provideFrontendRecommendations = (profileData) => {
   
   const avatar = profileData?.user?.avatar;
   
-  if (!avatar || avatar === 'default-avatar.jpg') {
+  if (!avatar || avatar === null) {
     console.log('📝 Current Status: No custom avatar uploaded');
     console.log('🔧 Recommendation: Use default Cloudinary avatar');
-    console.log('   const defaultAvatar = "https://res.cloudinary.com/dzrd37naa/image/upload/v1/pulih-hati/avatars/default-avatar.jpg";');
+    console.log('   const defaultAvatar = null;');
   } else if (avatar.includes('cloudinary.com')) {
     console.log('📝 Current Status: Valid Cloudinary avatar found');
     console.log('🔧 Recommendation: Use avatar URL directly with cache busting');
@@ -169,10 +169,10 @@ const provideFrontendRecommendations = (profileData) => {
   console.log('\n📋 Example Implementation:');
   console.log(`
 const getValidAvatarUrl = (avatarUrl) => {
-  if (avatarUrl && avatarUrl.includes('cloudinary.com') && avatarUrl !== 'default-avatar.jpg') {
+  if (avatarUrl && avatarUrl.includes('cloudinary.com') && avatarUrl !== null) {
     return avatarUrl;
   }
-  return 'https://res.cloudinary.com/dzrd37naa/image/upload/v1/pulih-hati/avatars/default-avatar.jpg';
+  return null;
 };
 
 // In your component:
@@ -189,7 +189,7 @@ setImageKey(Date.now()); // Force re-render
   src={\`\${avatarUrl}?t=\${imageKey}\`}
   alt="Profile"
   onError={(e) => {
-    const defaultAvatar = 'https://res.cloudinary.com/dzrd37naa/image/upload/v1/pulih-hati/avatars/default-avatar.jpg';
+    const defaultAvatar = null;
     if (e.target.src !== defaultAvatar) {
       e.target.src = defaultAvatar;
     }

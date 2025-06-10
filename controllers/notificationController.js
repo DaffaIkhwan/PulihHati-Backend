@@ -46,7 +46,7 @@ exports.getNotifications = async (req, res) => {
           _id: notification.actor_id,
           id: notification.actor_id,
           name: notification.actor_name || 'Anonymous',
-          avatar: notification.actor_avatar || '/static/default-avatar.svg'
+          avatar: notification.actor_avatar || null
         } : null,
         post: notification.post_id ? {
           _id: notification.post_id,

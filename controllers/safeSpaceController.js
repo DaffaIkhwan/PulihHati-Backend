@@ -1,6 +1,7 @@
 const { query, transaction } = require('../config/db');
 const logger = require('../config/logger');
 const { createNotification } = require('./notificationController');
+const cache = require('../config/redis');
 
 // @desc    Get all posts
 // @route   GET /api/safespace/posts
@@ -12,7 +13,17 @@ exports.getPosts = async (req, res) => {
     const offset = (page - 1) * limit;
     const userId = req.user.id;
 
-    logger.info(`Fetching posts page ${page}, limit ${limit}`);
+    // Create cache key
+    const cacheKey = `posts:${userId}:${page}:${limit}`;
+
+    // Try to get from cache first
+    const cachedData = await cache.getCache(cacheKey);
+    if (cachedData) {
+      logger.info(`Cache hit for posts page ${page}, limit ${limit}`);
+      return res.json(cachedData);
+    }
+
+    logger.info(`Cache miss - Fetching posts page ${page}, limit ${limit}`);
 
     // Gunakan satu transaksi untuk semua query
     const result = await transaction(async (client) => {
@@ -23,77 +34,109 @@ exports.getPosts = async (req, res) => {
 
       const total = parseInt(countResult.rows[0].count);
 
-      // Get posts with pagination and all related data in one query
+      // Optimized query - get posts first, then aggregate data
       const postsResult = await client.query(`
         SELECT
-          p.*,
+          p.id,
+          p.content,
+          p.author_id,
+          p.is_anonymous,
+          p.created_at,
+          p.updated_at,
           u.name as author_name,
-          u.avatar as author_avatar,
-          (SELECT COUNT(*) FROM "pulihHati".post_likes WHERE post_id = p.id) as like_count,
-          (SELECT COUNT(*) FROM "pulihHati".post_comments WHERE post_id = p.id) as comment_count,
-          EXISTS(
-            SELECT 1 FROM "pulihHati".bookmarks
-            WHERE post_id = p.id AND user_id = $3
-          ) as bookmarked
+          u.avatar as author_avatar
         FROM "pulihHati".posts p
-        JOIN "pulihHati".users u ON p.author_id = u.id
+        LEFT JOIN "pulihHati".users u ON p.author_id = u.id
         ORDER BY p.created_at DESC
         LIMIT $1 OFFSET $2
-      `, [limit, offset, userId]);
+      `, [limit, offset]);
 
-      // Get likes and comments for each post separately
+      // Get post IDs for batch queries
+      const postIds = postsResult.rows.map(post => post.id);
+
+      if (postIds.length === 0) {
+        return { posts: [], pagination: { page, limit, total: 0, pages: 0 } };
+      }
+
+      // Batch query for likes, comments, and bookmarks
+      const [likesResult, commentsResult, bookmarksResult] = await Promise.all([
+        client.query(`
+          SELECT post_id, COUNT(*) as like_count
+          FROM "pulihHati".post_likes
+          WHERE post_id = ANY($1)
+          GROUP BY post_id
+        `, [postIds]),
+
+        client.query(`
+          SELECT post_id, COUNT(*) as comment_count
+          FROM "pulihHati".post_comments
+          WHERE post_id = ANY($1)
+          GROUP BY post_id
+        `, [postIds]),
+
+        client.query(`
+          SELECT post_id
+          FROM "pulihHati".bookmarks
+          WHERE post_id = ANY($1) AND user_id = $2
+        `, [postIds, userId])
+      ]);
+
+      // Create lookup maps for O(1) access
+      const likeCounts = new Map(likesResult.rows.map(row => [row.post_id, parseInt(row.like_count)]));
+      const commentCounts = new Map(commentsResult.rows.map(row => [row.post_id, parseInt(row.comment_count)]));
+      const bookmarkedSet = new Set(bookmarksResult.rows.map(row => row.post_id));
+
+      // Get detailed likes and comments for each post
       const postsWithLikesAndComments = await Promise.all(postsResult.rows.map(async (post) => {
-        // Get likes
-        const likesResult = await client.query(`
-          SELECT
-            pl.user_id,
-            u.name as user_name
-          FROM
-            "pulihHati".post_likes pl
-          LEFT JOIN
-            "pulihHati".users u ON pl.user_id = u.id
-          WHERE
-            pl.post_id = $1
-        `, [post.id]);
+        // Use cached counts for performance
+        const likeCount = likeCounts.get(post.id) || 0;
+        const commentCount = commentCounts.get(post.id) || 0;
+        const isBookmarked = bookmarkedSet.has(post.id);
 
-        // Get comments
-        const commentsResult = await client.query(`
-          SELECT
-            pc.id,
-            pc.content,
-            pc.author_id,
-            pc.created_at,
-            u.name as author_name,
-            u.avatar as author_avatar
-          FROM
-            "pulihHati".post_comments pc
-          LEFT JOIN
-            "pulihHati".users u ON pc.author_id = u.id
-          WHERE
-            pc.post_id = $1
-          ORDER BY
-            pc.created_at ASC
-        `, [post.id]);
+        // Always get detailed likes and comments (even if empty) to ensure consistency
+        const [likesDetailResult, commentsDetailResult] = await Promise.all([
+          client.query(`
+            SELECT pl.user_id, u.name as user_name
+            FROM "pulihHati".post_likes pl
+            LEFT JOIN "pulihHati".users u ON pl.user_id = u.id
+            WHERE pl.post_id = $1
+          `, [post.id]),
+
+          client.query(`
+            SELECT pc.id, pc.content, pc.author_id, pc.created_at, u.name as author_name, u.avatar as author_avatar
+            FROM "pulihHati".post_comments pc
+            LEFT JOIN "pulihHati".users u ON pc.author_id = u.id
+            WHERE pc.post_id = $1
+            ORDER BY pc.created_at ASC
+          `, [post.id])
+        ]);
+
+        const detailedLikes = likesDetailResult.rows.map(like => ({
+          user: like.user_id,
+          _id: like.user_id,
+          name: like.user_name || 'Anonymous'
+        }));
+
+        const detailedComments = commentsDetailResult.rows.map(comment => ({
+          id: comment.id,
+          _id: comment.id,
+          content: comment.content,
+          created_at: comment.created_at,
+          author: {
+            id: comment.author_id,
+            _id: comment.author_id,
+            name: comment.author_name || 'Anonymous',
+            avatar: comment.author_avatar || null
+          }
+        }));
 
         return {
           ...post,
-          likes: likesResult.rows.map(like => ({
-            user: like.user_id,
-            _id: like.user_id,
-            name: like.user_name || 'Anonymous'
-          })),
-          comments: commentsResult.rows.map(comment => ({
-            id: comment.id,
-            _id: comment.id,
-            content: comment.content,
-            created_at: comment.created_at,
-            author: {
-              id: comment.author_id,
-              _id: comment.author_id,
-              name: comment.author_name || 'Anonymous',
-              avatar: comment.author_avatar || '/static/default-avatar.svg'
-            }
-          }))
+          like_count: likeCount,
+          comment_count: commentCount,
+          bookmarked: isBookmarked,
+          likes: detailedLikes,
+          comments: detailedComments
         };
       }));
 
@@ -102,13 +145,14 @@ exports.getPosts = async (req, res) => {
         _id: post.id,
         id: post.id,
         content: post.content,
+        isAnonymous: post.is_anonymous,
         created_at: post.created_at,
         updated_at: post.updated_at,
         author: {
           _id: post.author_id,
           id: post.author_id,
-          name: post.author_name || 'Anonymous',
-          avatar: post.author_avatar || '/static/default-avatar.svg'
+          name: post.is_anonymous ? 'Anonim' : (post.author_name || 'Anonymous'),
+          avatar: post.is_anonymous ? null : (post.author_avatar || null)
         },
         likes: post.likes || [],
         comments: post.comments || [], // Now includes actual comments from database
@@ -128,7 +172,10 @@ exports.getPosts = async (req, res) => {
       };
     });
 
-    logger.info(`Returning ${result.posts.length} posts`);
+    // Cache the result for 2 minutes
+    await cache.setCache(cacheKey, result.posts, 120);
+
+    logger.info(`Returning ${result.posts.length} posts (cached for 2 minutes)`);
     res.json(result.posts); // Return just the posts array to match frontend expectations
   } catch (error) {
     logger.error(`Error fetching posts: ${error.message}`);
@@ -142,21 +189,33 @@ exports.getPosts = async (req, res) => {
 // @access  Private
 exports.createPost = async (req, res) => {
   try {
-    const { content } = req.body;
+    // Accept both is_anonymous and isAnonymous for compatibility
+    const { content, is_anonymous, isAnonymous } = req.body;
+    const anonymousFlag = is_anonymous !== undefined ? is_anonymous : isAnonymous;
+
+    console.log('DEBUG anonymous flag dari FE:', {
+      is_anonymous,
+      isAnonymous,
+      anonymousFlag,
+      type: typeof anonymousFlag
+    });
 
     if (!content) {
       return res.status(400).json({ message: 'Content is required' });
     }
 
-    logger.info(`Creating post with content: ${content.substring(0, 30)}...`);
+    logger.info(`Creating post with content: ${content.substring(0, 30)}... (anonymous: ${anonymousFlag})`);
 
     const post = await transaction(async (client) => {
+      // Explicitly convert to boolean and handle various input types
+      const isAnonymousPost = Boolean(anonymousFlag === true || anonymousFlag === 'true' || anonymousFlag === 1);
+
       // Create post
       const result = await client.query(`
-        INSERT INTO "pulihHati".posts (content, author_id)
-        VALUES ($1, $2)
-        RETURNING id, content, author_id, created_at, updated_at
-      `, [content, req.user.id]);
+        INSERT INTO "pulihHati".posts (content, author_id, is_anonymous)
+        VALUES ($1, $2, $3)
+        RETURNING id, content, author_id, created_at, updated_at, is_anonymous
+      `, [content, req.user.id, isAnonymousPost]);
 
       const newPost = result.rows[0];
 
@@ -165,20 +224,21 @@ exports.createPost = async (req, res) => {
         SELECT name, avatar FROM "pulihHati".users WHERE id = $1
       `, [req.user.id]);
 
-      const user = userResult.rows[0] || { name: 'Anonymous', avatar: '/static/default-avatar.svg' };
+      const user = userResult.rows[0] || { name: 'Anonymous', avatar: null };
 
       // Format post for frontend
       return {
         _id: newPost.id,
         id: newPost.id,
         content: newPost.content,
+        isAnonymous: newPost.is_anonymous,
         created_at: newPost.created_at,
         updated_at: newPost.updated_at,
         author: {
           _id: req.user.id,
           id: req.user.id,
-          name: user.name,
-          avatar: user.avatar
+          name: newPost.is_anonymous ? 'Anonim' : user.name,
+          avatar: newPost.is_anonymous ? null : user.avatar
         },
         likes: [],
         comments: [],
@@ -188,7 +248,10 @@ exports.createPost = async (req, res) => {
       };
     });
 
-    logger.info(`Post created successfully with ID: ${post.id}`);
+    // Invalidate posts cache for all users since new post affects everyone
+    await cache.invalidateCache('posts:*');
+
+    logger.info(`Post created successfully with ID: ${post.id} (anonymous: ${post.isAnonymous})`);
     return res.status(201).json(post);
   } catch (error) {
     logger.error(`Error creating post: ${error.message}`);
@@ -196,6 +259,8 @@ exports.createPost = async (req, res) => {
     return res.status(500).json({ message: 'Failed to create post. Please try again.' });
   }
 };
+
+
 
 // @desc    Get a single post by ID
 // @route   GET /api/safespace/posts/:id
@@ -220,6 +285,7 @@ exports.getPostById = async (req, res) => {
           p.id,
           p.content,
           p.author_id,
+          p.is_anonymous,
           p.created_at,
           p.updated_at,
           u.name as author_name,
@@ -296,13 +362,14 @@ exports.getPostById = async (req, res) => {
       _id: result.post.id,
       id: result.post.id,
       content: result.post.content,
+      isAnonymous: result.post.is_anonymous,
       created_at: result.post.created_at,
       updated_at: result.post.updated_at,
       author: {
         _id: result.post.author_id,
         id: result.post.author_id,
-        name: result.post.author_name || 'Anonymous',
-        avatar: result.post.author_avatar || '/static/default-avatar.svg'
+        name: result.post.is_anonymous ? 'Anonim' : (result.post.author_name || 'Anonymous'),
+        avatar: result.post.is_anonymous ? null : (result.post.author_avatar || null)
       },
       likes: result.likes.map(like => ({
         user: like.user_id,
@@ -318,7 +385,7 @@ exports.getPostById = async (req, res) => {
           id: comment.author_id,
           _id: comment.author_id,
           name: comment.author_name || 'Anonymous',
-          avatar: comment.author_avatar || '/static/default-avatar.svg'
+          avatar: comment.author_avatar || null
         }
       })),
       likes_count: result.likes.length,
@@ -430,6 +497,9 @@ exports.likePost = async (req, res) => {
       }));
     });
 
+    // Invalidate posts cache since likes have changed
+    await cache.invalidateCache('posts:*');
+
     return res.status(200).json(result);
   } catch (error) {
     logger.error(`Error liking post: ${error.message}`);
@@ -484,7 +554,7 @@ exports.addComment = async (req, res) => {
         SELECT name, avatar FROM "pulihHati".users WHERE id = $1
       `, [userId]);
 
-      const commenter = userResult.rows[0] || { name: 'Anonymous', avatar: '/static/default-avatar.svg' };
+      const commenter = userResult.rows[0] || { name: 'Anonymous', avatar: null };
 
       // Create notification for post author (only if not commenting on own post)
       if (userId !== postAuthorId) {
@@ -526,10 +596,13 @@ exports.addComment = async (req, res) => {
           id: comment.author_id,
           _id: comment.author_id,
           name: comment.author_name || 'Anonymous',
-          avatar: comment.author_avatar || '/static/default-avatar.svg'
+          avatar: comment.author_avatar || null
         }
       }));
     });
+
+    // Invalidate posts cache since comments have changed
+    await cache.invalidateCache('posts:*');
 
     return res.status(200).json(result);
   } catch (error) {
@@ -598,7 +671,7 @@ exports.getPostComments = async (req, res) => {
           id: comment.author_id,
           _id: comment.author_id,
           name: comment.author_name || 'Anonymous',
-          avatar: comment.author_avatar || '/static/default-avatar.svg'
+          avatar: comment.author_avatar || null
         }
       }));
     });
@@ -761,7 +834,7 @@ exports.getBookmarkedPosts = async (req, res) => {
               id: comment.author_id,
               _id: comment.author_id,
               name: comment.author_name || 'Anonymous',
-              avatar: comment.author_avatar || '/static/default-avatar.svg'
+              avatar: comment.author_avatar || null
             }
           }))
         };
@@ -778,7 +851,7 @@ exports.getBookmarkedPosts = async (req, res) => {
           _id: post.author_id,
           id: post.author_id,
           name: post.author_name || 'Anonymous',
-          avatar: post.author_avatar || '/static/default-avatar.svg'
+          avatar: post.author_avatar || null
         },
         likes: post.likes || [],
         comments: post.comments || [], // Now includes actual comments from database
@@ -849,7 +922,7 @@ exports.updatePost = async (req, res) => {
         SELECT name, avatar FROM "pulihHati".users WHERE id = $1
       `, [userId]);
 
-      const user = userResult.rows[0] || { name: 'Anonymous', avatar: '/static/default-avatar.svg' };
+      const user = userResult.rows[0] || { name: 'Anonymous', avatar: null };
 
       // Get likes count
       const likesResult = await client.query(`
@@ -863,7 +936,7 @@ exports.updatePost = async (req, res) => {
 
       // Check if current user liked this post
       const userLikeResult = await client.query(`
-        SELECT id FROM "pulihHati".post_likes WHERE post_id = $1 AND user_id = $2
+        SELECT post_id FROM "pulihHati".post_likes WHERE post_id = $1 AND user_id = $2
       `, [postId, userId]);
 
       // Check if current user bookmarked this post
@@ -882,7 +955,7 @@ exports.updatePost = async (req, res) => {
           _id: userId,
           id: userId,
           name: user.name,
-          avatar: user.avatar
+          avatar: user.avatar || null
         },
         likes: [],
         comments: [],

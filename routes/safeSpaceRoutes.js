@@ -5,13 +5,24 @@ const safeSpaceController = require('../controllers/safeSpaceController');
 const notificationController = require('../controllers/notificationController');
 const uploadController = require('../controllers/uploadController');
 
-// Get all posts
+// Test endpoint
+router.get('/test', (req, res) => {
+  res.json({ message: 'SafeSpace API is working', timestamp: new Date().toISOString() });
+});
+
+// Get all posts (public - read-only access)
+router.get('/posts/public', safeSpaceController.getPublicPosts);
+
+// Get all posts (authenticated users)
 router.get('/posts', protect, safeSpaceController.getPosts);
 
 // Create a new post
 router.post('/posts', protect, safeSpaceController.createPost);
 
-// Get a single post by ID
+// Get a single post by ID (public - read-only access)
+router.get('/posts/:id/public', safeSpaceController.getPublicPostById);
+
+// Get a single post by ID (authenticated users)
 router.get('/posts/:id', protect, safeSpaceController.getPostById);
 
 // Update a post

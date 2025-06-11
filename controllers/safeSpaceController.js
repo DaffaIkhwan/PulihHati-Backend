@@ -3,6 +3,145 @@ const logger = require('../config/logger');
 const { createNotification } = require('./notificationController');
 const cache = require('../config/redis');
 
+// @desc    Get all posts (public access - read-only)
+// @route   GET /api/safespace/posts/public
+// @access  Public
+exports.getPublicPosts = async (req, res) => {
+  try {
+    const page = parseInt(req.query.page) || 1;
+    const limit = parseInt(req.query.limit) || 10;
+    const offset = (page - 1) * limit;
+
+    // Create cache key for public posts
+    const cacheKey = `public_posts:${page}:${limit}`;
+
+    // Try to get from cache first
+    const cachedData = await cache.getCache(cacheKey);
+    if (cachedData) {
+      logger.info(`Cache hit for public posts page ${page}, limit ${limit}`);
+      return res.json(cachedData);
+    }
+
+    logger.info(`Cache miss - Fetching public posts page ${page}, limit ${limit}`);
+
+    const result = await transaction(async (client) => {
+      // Count total posts
+      const countResult = await client.query(`
+        SELECT COUNT(*) FROM "pulihHati".posts
+      `);
+
+      const total = parseInt(countResult.rows[0].count);
+
+      // Get posts without user-specific data
+      const postsResult = await client.query(`
+        SELECT
+          p.id,
+          p.content,
+          p.author_id,
+          p.is_anonymous,
+          p.created_at,
+          p.updated_at,
+          u.name as author_name,
+          u.avatar as author_avatar
+        FROM "pulihHati".posts p
+        LEFT JOIN "pulihHati".users u ON p.author_id = u.id
+        ORDER BY p.created_at DESC
+        LIMIT $1 OFFSET $2
+      `, [limit, offset]);
+
+      // Get post IDs for batch queries
+      const postIds = postsResult.rows.map(post => post.id);
+
+      if (postIds.length === 0) {
+        return { posts: [], pagination: { page, limit, total: 0, pages: 0 } };
+      }
+
+      // Batch query for likes and comments count only (no user-specific data)
+      const [likesResult, commentsResult] = await Promise.all([
+        client.query(`
+          SELECT post_id, COUNT(*) as like_count
+          FROM "pulihHati".post_likes
+          WHERE post_id = ANY($1)
+          GROUP BY post_id
+        `, [postIds]),
+
+        client.query(`
+          SELECT post_id, COUNT(*) as comment_count
+          FROM "pulihHati".post_comments
+          WHERE post_id = ANY($1)
+          GROUP BY post_id
+        `, [postIds])
+      ]);
+
+      // Create lookup maps
+      const likesMap = {};
+      const commentsMap = {};
+
+      likesResult.rows.forEach(row => {
+        likesMap[row.post_id] = parseInt(row.like_count);
+      });
+
+      commentsResult.rows.forEach(row => {
+        commentsMap[row.post_id] = parseInt(row.comment_count);
+      });
+
+      // Format posts for public access (no user-specific data)
+      const posts = postsResult.rows.map(post => ({
+        _id: post.id,
+        id: post.id,
+        content: post.content,
+        created_at: post.created_at,
+        updated_at: post.updated_at,
+        author: post.is_anonymous ? {
+          _id: 'anonymous',
+          id: 'anonymous',
+          name: 'Anonymous',
+          avatar: null
+        } : {
+          _id: post.author_id,
+          id: post.author_id,
+          name: post.author_name,
+          avatar: post.author_avatar
+        },
+        likes: [], // Empty for public access
+        comments: [], // Empty for public access
+        likes_count: likesMap[post.id] || 0,
+        comments_count: commentsMap[post.id] || 0,
+        bookmarked: false, // Always false for public access
+        liked: false // Always false for public access
+      }));
+
+      const pages = Math.ceil(total / limit);
+
+      return {
+        posts,
+        pagination: {
+          page,
+          limit,
+          total,
+          pages,
+          hasNext: page < pages,
+          hasPrev: page > 1
+        }
+      };
+    });
+
+    // Cache the result for 5 minutes
+    await cache.setCache(cacheKey, result, 300);
+
+    logger.info(`Successfully fetched ${result.posts.length} public posts for page ${page}`);
+    res.json(result); // Return full result with pagination info
+
+  } catch (error) {
+    logger.error(`Error in getPublicPosts: ${error.message}`);
+    logger.error(`Stack trace: ${error.stack}`);
+    res.status(500).json({
+      message: 'Failed to fetch posts. Please try again later.',
+      error: process.env.NODE_ENV === 'development' ? error.message : undefined
+    });
+  }
+};
+
 // @desc    Get all posts
 // @route   GET /api/safespace/posts
 // @access  Private
@@ -397,6 +536,132 @@ exports.getPostById = async (req, res) => {
     return res.status(200).json(formattedPost);
   } catch (error) {
     logger.error(`Error fetching post by ID: ${error.message}`);
+    logger.error(`Stack trace: ${error.stack}`);
+    return res.status(500).json({ message: 'Failed to fetch post. Please try again.' });
+  }
+};
+
+// @desc    Get a single post by ID (public access - read-only)
+// @route   GET /api/safespace/posts/:id/public
+// @access  Public
+exports.getPublicPostById = async (req, res) => {
+  try {
+    const postId = req.params.id;
+
+    // Validate postId
+    if (!postId || postId === 'undefined' || isNaN(parseInt(postId))) {
+      logger.error(`Invalid post ID received: ${postId}`);
+      return res.status(400).json({ message: 'Invalid post ID provided' });
+    }
+
+    logger.info(`Fetching public post with ID: ${postId}`);
+
+    const result = await transaction(async (client) => {
+      // Get post with author info
+      const postResult = await client.query(`
+        SELECT
+          p.id,
+          p.content,
+          p.author_id,
+          p.is_anonymous,
+          p.created_at,
+          p.updated_at,
+          u.name as author_name,
+          u.avatar as author_avatar
+        FROM
+          "pulihHati".posts p
+        LEFT JOIN
+          "pulihHati".users u ON p.author_id = u.id
+        WHERE
+          p.id = $1
+      `, [postId]);
+
+      if (postResult.rows.length === 0) {
+        logger.info(`Post with ID ${postId} not found`);
+        return null;
+      }
+
+      const post = postResult.rows[0];
+
+      // Get comments for this post (without user-specific data)
+      const commentsResult = await client.query(`
+        SELECT
+          pc.id,
+          pc.content,
+          pc.author_id,
+          pc.created_at,
+          u.name as author_name,
+          u.avatar as author_avatar
+        FROM
+          "pulihHati".post_comments pc
+        LEFT JOIN
+          "pulihHati".users u ON pc.author_id = u.id
+        WHERE
+          pc.post_id = $1
+        ORDER BY
+          pc.created_at ASC
+      `, [postId]);
+
+      // Get likes count only (no user-specific data)
+      const likesCountResult = await client.query(`
+        SELECT COUNT(*) as like_count
+        FROM "pulihHati".post_likes
+        WHERE post_id = $1
+      `, [postId]);
+
+      return {
+        post,
+        comments: commentsResult.rows,
+        likes_count: parseInt(likesCountResult.rows[0].like_count)
+      };
+    });
+
+    if (!result) {
+      return res.status(404).json({ message: 'Post not found' });
+    }
+
+    // Format post for public access (no user-specific data)
+    const formattedPost = {
+      _id: result.post.id,
+      id: result.post.id,
+      content: result.post.content,
+      isAnonymous: result.post.is_anonymous,
+      created_at: result.post.created_at,
+      updated_at: result.post.updated_at,
+      author: result.post.is_anonymous ? {
+        _id: 'anonymous',
+        id: 'anonymous',
+        name: 'Anonymous',
+        avatar: null
+      } : {
+        _id: result.post.author_id,
+        id: result.post.author_id,
+        name: result.post.author_name || 'Anonymous',
+        avatar: result.post.author_avatar || null
+      },
+      likes: [], // Empty for public access
+      comments: result.comments.map(comment => ({
+        id: comment.id,
+        _id: comment.id,
+        content: comment.content,
+        created_at: comment.created_at,
+        author: {
+          id: comment.author_id,
+          _id: comment.author_id,
+          name: comment.author_name || 'Anonymous',
+          avatar: comment.author_avatar || null
+        }
+      })),
+      likes_count: result.likes_count,
+      comments_count: result.comments.length,
+      bookmarked: false, // Always false for public access
+      liked: false // Always false for public access
+    };
+
+    logger.info(`Successfully fetched public post with ID: ${postId}`);
+    return res.status(200).json(formattedPost);
+  } catch (error) {
+    logger.error(`Error fetching public post by ID: ${error.message}`);
     logger.error(`Stack trace: ${error.stack}`);
     return res.status(500).json({ message: 'Failed to fetch post. Please try again.' });
   }

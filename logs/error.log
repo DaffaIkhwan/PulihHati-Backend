@@ -1048,3 +1048,48 @@
 {"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-10 16:14:46"}
 {"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-10 16:55:28"}
 {"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-10 16:55:28"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 23:02:45"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-10 23:02:47"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 23:05:13"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-10 23:08:36"}
+{"level":"error","message":"Auth middleware error: jwt malformed","service":"pulih-hati-backend","timestamp":"2025-06-10 23:19:54"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 01:50:47"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 01:57:28"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5001","service":"pulih-hati-backend","timestamp":"2025-06-11 01:57:29"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 01:58:03"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:04:19"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5001","service":"pulih-hati-backend","timestamp":"2025-06-11 02:04:19"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:04:57"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:10:04"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5001","service":"pulih-hati-backend","timestamp":"2025-06-11 02:10:05"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:40:21"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:41:17"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5001","service":"pulih-hati-backend","timestamp":"2025-06-11 02:41:17"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 02:41:50"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5001","service":"pulih-hati-backend","timestamp":"2025-06-11 02:41:51"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 11:58:56"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:01:45"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:07:38"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 12:07:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:07:49"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 12:07:49"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:09:14"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:14:18"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 12:42:41"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 13:15:25"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 13:15:25"}
+{"level":"error","message":"Auth middleware error: jwt malformed","service":"pulih-hati-backend","timestamp":"2025-06-11 13:32:28"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 14:03:43"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 14:05:24"}
+{"level":"error","message":"Database query error (attempt 1/3): SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string","service":"pulih-hati-backend","timestamp":"2025-06-11 14:05:43"}
+{"level":"error","message":"Database query error (attempt 2/3): SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string","service":"pulih-hati-backend","timestamp":"2025-06-11 14:05:49"}
+{"level":"error","message":"Database query error (attempt 3/3): SASL: SCRAM-SERVER-FIRST-MESSAGE: client password must be a string","service":"pulih-hati-backend","timestamp":"2025-06-11 14:06:01"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 14:11:11"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-11 14:33:10"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 15:03:21"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 15:20:03"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 16:10:19"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 16:10:19"}
+{"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-11 16:10:34"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-11 17:02:38"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-11 17:22:56"}

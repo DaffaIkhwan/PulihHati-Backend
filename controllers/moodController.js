@@ -1,13 +1,13 @@
 const Mood = require('../models/Mood');
 const logger = require('../config/logger');
 
-// Mood types configuration
+// Mood types configuration - aligned with frontend
 const MOOD_TYPES = {
-  1: { emoji: '😢', label: 'Sedih' },
-  2: { emoji: '😟', label: 'Cemas' },
-  3: { emoji: '😐', label: 'Netral' },
-  4: { emoji: '😊', label: 'Senang' },
-  5: { emoji: '😄', label: 'Sangat Bahagia' }
+  1: { emoji: '😊', label: 'Sangat Baik' },
+  2: { emoji: '🙂', label: 'Baik' },
+  3: { emoji: '😐', label: 'Biasa' },
+  4: { emoji: '😔', label: 'Buruk' },
+  5: { emoji: '😢', label: 'Sangat Buruk' }
 };
 
 // @desc    Save or update mood entry
@@ -260,25 +260,25 @@ exports.getMoodTypes = async (req, res) => {
   }
 };
 
-// Helper functions
+// Helper functions - aligned with frontend mapping
 const getMoodColor = (moodLevel) => {
   const colors = {
-    1: 'bg-blue-100 text-blue-700 border-blue-300',
-    2: 'bg-yellow-100 text-yellow-700 border-yellow-300',
-    3: 'bg-gray-100 text-gray-700 border-gray-300',
-    4: 'bg-green-100 text-green-700 border-green-300',
-    5: 'bg-pink-100 text-pink-700 border-pink-300'
+    1: 'bg-green-100 text-green-700 border-green-300',      // Sangat Baik
+    2: 'bg-emerald-100 text-emerald-700 border-emerald-300', // Baik
+    3: 'bg-yellow-100 text-yellow-700 border-yellow-300',   // Biasa
+    4: 'bg-orange-100 text-orange-700 border-orange-300',   // Buruk
+    5: 'bg-red-100 text-red-700 border-red-300'             // Sangat Buruk
   };
   return colors[moodLevel] || colors[3];
 };
 
 const getMoodChartColor = (moodLevel) => {
   const colors = {
-    1: '#3B82F6',
-    2: '#F59E0B',
-    3: '#6B7280',
-    4: '#10B981',
-    5: '#EC4899'
+    1: '#22C55E',  // Green - Sangat Baik
+    2: '#10B981',  // Emerald - Baik
+    3: '#EAB308',  // Yellow - Biasa
+    4: '#F97316',  // Orange - Buruk
+    5: '#EF4444'   // Red - Sangat Buruk
   };
   return colors[moodLevel] || colors[3];
 };

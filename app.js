@@ -35,9 +35,43 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/upload', uploadRoutes);
 app.use('/api/mood', moodRoutes);
 
-// Health check route
+// Health check routes (both /health and /api/health)
 app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'ok' });
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+app.get('/api/health', (req, res) => {
+  res.status(200).json({
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    uptime: process.uptime(),
+    environment: process.env.NODE_ENV || 'development'
+  });
+});
+
+// Root API endpoint
+app.get('/api', (req, res) => {
+  res.status(200).json({
+    message: 'PulihHati Backend API',
+    version: '1.0.0',
+    status: 'running',
+    timestamp: new Date().toISOString(),
+    endpoints: {
+      health: '/api/health',
+      auth: '/api/auth',
+      users: '/api/users',
+      chatbot: '/api/chatbot',
+      safespace: '/api/safespace',
+      mood: '/api/mood',
+      upload: '/api/upload',
+      notifications: '/api/notifications'
+    }
+  });
 });
 
 // Error handling middleware

@@ -1093,3 +1093,9 @@
 {"level":"error","message":"Gagal menghubungi chatbot Flask: Request failed with status code 404","service":"pulih-hati-backend","timestamp":"2025-06-11 16:10:34"}
 {"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-11 17:02:38"}
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-11 17:22:56"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 17:55:29"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:05:28"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:06:27"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:06:51"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:07:08"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:07:08"}

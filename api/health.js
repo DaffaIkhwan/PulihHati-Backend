@@ -1,29 +1,30 @@
-// Simple test endpoint for Vercel
+// Simple health check endpoint for Vercel
 module.exports = (req, res) => {
   try {
     // Set CORS headers
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
     res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
-
+    
     // Handle preflight requests
     if (req.method === 'OPTIONS') {
       res.status(200).end();
       return;
     }
-
+    
     res.status(200).json({
-      message: 'Vercel backend is working!',
+      status: 'ok',
+      message: 'Vercel backend health check passed',
       timestamp: new Date().toISOString(),
-      method: req.method,
-      url: req.url,
-      headers: req.headers,
-      environment: process.env.NODE_ENV || 'production'
+      uptime: process.uptime(),
+      environment: process.env.NODE_ENV || 'production',
+      version: '1.0.0'
     });
   } catch (error) {
-    console.error('Test endpoint error:', error);
+    console.error('Health check error:', error);
     res.status(500).json({
-      error: 'Test endpoint failed',
+      status: 'error',
+      error: 'Health check failed',
       message: error.message,
       timestamp: new Date().toISOString()
     });

@@ -1378,3 +1378,4 @@
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 05:54:55"}
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:58:58"}
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 06:04:08"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 06:38:08"}

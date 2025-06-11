@@ -164,11 +164,12 @@ exports.createNotification = async (client, { userId, actorId, type, message, po
       return null;
     }
 
+    const wibTime = new Date(new Date().getTime() + (7 * 60 * 60 * 1000));
     const result = await client.query(`
-      INSERT INTO "pulihHati".notifications (user_id, actor_id, type, message, post_id)
-      VALUES ($1, $2, $3, $4, $5)
+      INSERT INTO "pulihHati".notifications (user_id, actor_id, type, message, post_id, created_at)
+      VALUES ($1, $2, $3, $4, $5, $6)
       RETURNING id
-    `, [userId, actorId, type, message, postId]);
+    `, [userId, actorId, type, message, postId, wibTime]);
 
     logger.info(`Created notification for user ${userId} from actor ${actorId}: ${type}`);
     return result.rows[0];

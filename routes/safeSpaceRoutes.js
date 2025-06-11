@@ -37,6 +37,8 @@ router.put('/posts/:id/like', protect, safeSpaceController.likePost);
 // Comment routes
 router.get('/posts/:id/comments', protect, safeSpaceController.getPostComments);
 router.post('/posts/:id/comments', protect, safeSpaceController.addComment);
+router.put('/comments/:id', protect, safeSpaceController.updateComment);
+router.delete('/comments/:id', protect, safeSpaceController.deleteComment);
 
 // Bookmark a post
 router.put('/posts/:id/bookmark', protect, safeSpaceController.toggleBookmark);

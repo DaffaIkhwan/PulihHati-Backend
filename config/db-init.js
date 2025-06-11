@@ -83,6 +83,12 @@ const createTables = async () => {
       )
     `);
 
+    // Add updated_at column to post_comments if it doesn't exist
+    await pool.query(`
+      ALTER TABLE "pulihHati".post_comments
+      ADD COLUMN IF NOT EXISTS updated_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    `);
+
     // Buat tabel bookmarks jika belum ada
     await pool.query(`
       CREATE TABLE IF NOT EXISTS "pulihHati".bookmarks (

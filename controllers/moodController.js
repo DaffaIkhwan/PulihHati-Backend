@@ -33,15 +33,19 @@ exports.saveMoodEntry = async (req, res) => {
       });
     }
 
-    // Use today's date if not provided (using local timezone)
+    // Use today's date if not provided (using consistent WIB timezone)
     let targetDate = entry_date;
     if (!targetDate) {
+      // Use consistent WIB date calculation
       const now = new Date();
-      // Get local date in YYYY-MM-DD format
-      const year = now.getFullYear();
-      const month = String(now.getMonth() + 1).padStart(2, '0');
-      const day = String(now.getDate()).padStart(2, '0');
+      const wibTime = new Date(now.getTime() + (7 * 60 * 60 * 1000)); // Add 7 hours for WIB
+      const year = wibTime.getUTCFullYear();
+      const month = String(wibTime.getUTCMonth() + 1).padStart(2, '0');
+      const day = String(wibTime.getUTCDate()).padStart(2, '0');
       targetDate = `${year}-${month}-${day}`;
+
+      console.log(`🕐 Controller WIB time: ${wibTime.toISOString()}`);
+      console.log(`📅 Controller target date: ${targetDate}`);
     }
 
     // Get day info for debugging

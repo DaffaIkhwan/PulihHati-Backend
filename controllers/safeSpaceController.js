@@ -349,12 +349,13 @@ exports.createPost = async (req, res) => {
       // Explicitly convert to boolean and handle various input types
       const isAnonymousPost = Boolean(anonymousFlag === true || anonymousFlag === 'true' || anonymousFlag === 1);
 
-      // Create post
+      // Create post with proper WIB timezone handling
+      const wibTime = new Date(new Date().getTime() + (7 * 60 * 60 * 1000));
       const result = await client.query(`
-        INSERT INTO "pulihHati".posts (content, author_id, is_anonymous)
-        VALUES ($1, $2, $3)
+        INSERT INTO "pulihHati".posts (content, author_id, is_anonymous, created_at, updated_at)
+        VALUES ($1, $2, $3, $4, $4)
         RETURNING id, content, author_id, created_at, updated_at, is_anonymous
-      `, [content, req.user.id, isAnonymousPost]);
+      `, [content, req.user.id, isAnonymousPost, wibTime]);
 
       const newPost = result.rows[0];
 
@@ -820,12 +821,13 @@ exports.addComment = async (req, res) => {
         throw new Error('Duplicate comment detected. Please wait before commenting again.');
       }
 
-      // Add comment to post_comments table
+      // Add comment to post_comments table with proper WIB timezone handling
+      const wibTime = new Date(new Date().getTime() + (7 * 60 * 60 * 1000));
       const commentResult = await client.query(`
-        INSERT INTO "pulihHati".post_comments (post_id, author_id, content)
-        VALUES ($1, $2, $3)
+        INSERT INTO "pulihHati".post_comments (post_id, author_id, content, created_at)
+        VALUES ($1, $2, $3, $4)
         RETURNING id, content, created_at
-      `, [postId, userId, content]);
+      `, [postId, userId, content, wibTime]);
 
       // Get commenter info
       const userResult = await client.query(`
@@ -1189,13 +1191,14 @@ exports.updatePost = async (req, res) => {
         throw new Error('Not authorized to edit this post');
       }
 
-      // Update the post
+      // Update the post with WIB timezone
+      const wibTime = new Date(new Date().getTime() + (7 * 60 * 60 * 1000));
       const updateResult = await client.query(`
         UPDATE "pulihHati".posts
-        SET content = $1, updated_at = NOW()
-        WHERE id = $2
-        RETURNING id, content, author_id, created_at, updated_at
-      `, [content.trim(), postId]);
+        SET content = $1, updated_at = $2
+        WHERE id = $3
+        RETURNING id, content, author_id, created_at, updated_at, is_anonymous
+      `, [content.trim(), wibTime, postId]);
 
       const updatedPost = updateResult.rows[0];
 
@@ -1343,6 +1346,159 @@ exports.deletePost = async (req, res) => {
     }
 
     return res.status(500).json({ message: 'Failed to delete post. Please try again.' });
+  }
+};
+
+// @desc    Update a comment
+// @route   PUT /api/safespace/comments/:id
+// @access  Private
+exports.updateComment = async (req, res) => {
+  try {
+    const commentId = req.params.id;
+    const userId = req.user.id;
+    const { content } = req.body;
+
+    if (!content || !content.trim()) {
+      return res.status(400).json({ message: 'Comment content is required' });
+    }
+
+    logger.info(`User ${userId} updating comment ${commentId}`);
+
+    const result = await transaction(async (client) => {
+      // Check if comment exists and verify ownership
+      const commentCheck = await client.query(`
+        SELECT id, author_id, post_id, content FROM "pulihHati".post_comments WHERE id = $1
+      `, [commentId]);
+
+      if (commentCheck.rows.length === 0) {
+        throw new Error('Comment not found');
+      }
+
+      const comment = commentCheck.rows[0];
+
+      // Check if user is the author of the comment
+      if (comment.author_id !== userId) {
+        throw new Error('Not authorized to edit this comment');
+      }
+
+      // Update the comment with WIB timezone
+      const wibTime = new Date(new Date().getTime() + (7 * 60 * 60 * 1000));
+      const updateResult = await client.query(`
+        UPDATE "pulihHati".post_comments
+        SET content = $1, updated_at = $2
+        WHERE id = $3
+        RETURNING id, content, author_id, post_id, created_at, updated_at
+      `, [content.trim(), wibTime, commentId]);
+
+      const updatedComment = updateResult.rows[0];
+
+      // Get user info
+      const userResult = await client.query(`
+        SELECT name, avatar FROM "pulihHati".users WHERE id = $1
+      `, [userId]);
+
+      const user = userResult.rows[0] || { name: 'Anonymous', avatar: null };
+
+      return {
+        id: updatedComment.id,
+        _id: updatedComment.id,
+        content: updatedComment.content,
+        created_at: updatedComment.created_at,
+        updated_at: updatedComment.updated_at,
+        author: {
+          id: updatedComment.author_id,
+          _id: updatedComment.author_id,
+          name: user.name,
+          avatar: user.avatar
+        }
+      };
+    });
+
+    // Invalidate posts cache since comment has changed
+    await cache.invalidateCache('posts:*');
+
+    logger.info(`Comment ${commentId} updated successfully`);
+    return res.status(200).json(result);
+  } catch (error) {
+    logger.error(`Error updating comment: ${error.message}`);
+
+    if (error.message === 'Comment not found') {
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+    if (error.message === 'Not authorized to edit this comment') {
+      return res.status(403).json({ message: 'Not authorized to edit this comment' });
+    }
+
+    return res.status(500).json({ message: 'Failed to update comment. Please try again.' });
+  }
+};
+
+// @desc    Delete a comment
+// @route   DELETE /api/safespace/comments/:id
+// @access  Private
+exports.deleteComment = async (req, res) => {
+  try {
+    const commentId = req.params.id;
+    const userId = req.user.id;
+
+    logger.info(`User ${userId} attempting to delete comment ${commentId}`);
+
+    const result = await transaction(async (client) => {
+      // Check if comment exists and get comment and post info
+      const commentCheck = await client.query(`
+        SELECT
+          pc.id,
+          pc.author_id,
+          pc.post_id,
+          p.author_id as post_author_id
+        FROM "pulihHati".post_comments pc
+        JOIN "pulihHati".posts p ON pc.post_id = p.id
+        WHERE pc.id = $1
+      `, [commentId]);
+
+      if (commentCheck.rows.length === 0) {
+        throw new Error('Comment not found');
+      }
+
+      const comment = commentCheck.rows[0];
+
+      // Check if user is the author of the comment OR the owner of the post
+      const isCommentAuthor = comment.author_id === userId;
+      const isPostOwner = comment.post_author_id === userId;
+
+      if (!isCommentAuthor && !isPostOwner) {
+        throw new Error('Not authorized to delete this comment');
+      }
+
+      // Delete the comment
+      await client.query(`
+        DELETE FROM "pulihHati".post_comments WHERE id = $1
+      `, [commentId]);
+
+      return {
+        success: true,
+        commentId: commentId,
+        postId: comment.post_id,
+        deletedBy: isCommentAuthor ? 'author' : 'post_owner'
+      };
+    });
+
+    // Invalidate posts cache since comment has been deleted
+    await cache.invalidateCache('posts:*');
+
+    logger.info(`Comment ${commentId} deleted successfully by ${result.deletedBy}`);
+    return res.status(200).json(result);
+  } catch (error) {
+    logger.error(`Error deleting comment: ${error.message}`);
+
+    if (error.message === 'Comment not found') {
+      return res.status(404).json({ message: 'Comment not found' });
+    }
+    if (error.message === 'Not authorized to delete this comment') {
+      return res.status(403).json({ message: 'Not authorized to delete this comment' });
+    }
+
+    return res.status(500).json({ message: 'Failed to delete comment. Please try again.' });
   }
 };
 

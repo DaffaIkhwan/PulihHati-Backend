@@ -1203,3 +1203,178 @@
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 02:39:59"}
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:06:08"}
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 03:37:36"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:46:14"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:51:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:51:50"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:52:07"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:52:23"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 03:52:42"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:02:20"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:06:20"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:11:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:11:49"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:16:20"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:16:47"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:16:58"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:19:05"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:19:05"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:20:29"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:01"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:01"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:21"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:22"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:52"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:26:52"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:09"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:09"}
+{"level":"error","message":"Auth middleware error: invalid signature","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:23"}
+{"level":"error","message":"Auth middleware error: invalid signature","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:23"}
+{"level":"error","message":"Auth middleware error: invalid signature","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:23"}
+{"level":"error","message":"Auth middleware error: invalid signature","service":"pulih-hati-backend","timestamp":"2025-06-12 04:27:23"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:34:37"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:37:01"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:37:13"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:37:24"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:38:41"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 04:38:41"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:39:48"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:42:19"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"updated_at\" of relation \"post_comments\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 04:44:10"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"updated_at\" of relation \"post_comments\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 04:44:18"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" of relation \"post_comments\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 04:44:30"}
+{"level":"error","message":"Error adding comment: column \"updated_at\" of relation \"post_comments\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 04:44:31"}
+{"level":"error","message":"Stack trace: error: column \"updated_at\" of relation \"post_comments\" does not exist\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg\\lib\\client.js:545:17\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:826:29\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.addComment (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:798:20)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:44:31"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:45:16"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:08"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:09"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:14"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:26"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:29"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:29"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:32"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:32"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:32"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:32"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:35"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:35"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:35"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:38"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:38"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:38"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:38"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:41"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:47"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:50"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:53"}
+{"level":"error","message":"Error in User.findById: getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:53"}
+{"level":"error","message":"Stack trace: Error: getaddrinfo ENOTFOUND 8tqyk.h.filess.io\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\node_modules\\pg-pool\\index.js:45:11\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async queryWithRetry (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:57:16)\n    at async User.findById (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\models\\User.js:37:22)\n    at async exports.protect (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\middleware\\auth.js:20:22)","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:53"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:53"}
+{"level":"error","message":"Transaction error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:53"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:55"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:55"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:59"}
+{"level":"error","message":"Transaction error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:58:59"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:59:01"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:59:01"}
+{"level":"error","message":"Database query error (attempt 1/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 04:59:58"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 04:59:58"}
+{"level":"error","message":"Database query error (attempt 2/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 05:00:04"}
+{"level":"error","message":"Database query error (attempt 3/3): getaddrinfo ENOTFOUND 8tqyk.h.filess.io","service":"pulih-hati-backend","timestamp":"2025-06-12 05:00:16"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:03:35"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:04:32"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:04:46"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:05:02"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:09:03"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 05:09:03"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:09:28"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:10:11"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 05:10:12"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:10:40"}
+{"level":"error","message":"Transaction error (attempt 1/3): Duplicate comment detected. Please wait before commenting again.","service":"pulih-hati-backend","timestamp":"2025-06-12 05:12:51"}
+{"level":"error","message":"Transaction error (attempt 2/3): Duplicate comment detected. Please wait before commenting again.","service":"pulih-hati-backend","timestamp":"2025-06-12 05:12:58"}
+{"level":"error","message":"Transaction error (attempt 3/3): Duplicate comment detected. Please wait before commenting again.","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:11"}
+{"level":"error","message":"Error adding comment: Duplicate comment detected. Please wait before commenting again.","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:11"}
+{"level":"error","message":"Stack trace: Error: Duplicate comment detected. Please wait before commenting again.\n    at C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:821:15\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)\n    at async transaction (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\config\\db.js:163:22)\n    at async exports.addComment (C:\\Users\\Acer\\dicoding\\PulihHati-Backend\\controllers\\safeSpaceController.js:798:20)","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:11"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:31"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:38"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:47"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:47"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:47"}
+{"level":"error","message":"Database query error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:47"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:48"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:51"}
+{"level":"error","message":"Error updating comment: column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:51"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:52"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:13:58"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:03"}
+{"level":"error","message":"Database query error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:03"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:04"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:08"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:08"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:12"}
+{"level":"error","message":"Error updating comment: column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:12"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:13"}
+{"level":"error","message":"Transaction error (attempt 1/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:19"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:21"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:21"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:24"}
+{"level":"error","message":"Transaction error (attempt 3/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:25"}
+{"level":"error","message":"Error updating comment: timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:25"}
+{"level":"error","message":"Transaction error (attempt 3/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:26"}
+{"level":"error","message":"Error updating comment: timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:26"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:26"}
+{"level":"error","message":"Transaction error (attempt 3/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:30"}
+{"level":"error","message":"Error updating comment: timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:30"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:35"}
+{"level":"error","message":"Transaction error (attempt 1/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:36"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:37"}
+{"level":"error","message":"Transaction error (attempt 2/3): timeout exceeded when trying to connect","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:37"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:39"}
+{"level":"error","message":"Error updating comment: column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:39"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:40"}
+{"level":"error","message":"Error updating comment: column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:40"}
+{"level":"error","message":"Transaction error (attempt 2/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:42"}
+{"level":"error","message":"Transaction error (attempt 3/3): column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:55"}
+{"level":"error","message":"Error updating comment: column \"updated_at\" does not exist","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:55"}
+{"level":"error","message":"Transaction error (attempt 3/3): Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:56"}
+{"level":"error","message":"Error deleting comment: Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:56"}
+{"level":"error","message":"Transaction error (attempt 3/3): Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:57"}
+{"level":"error","message":"Error updating comment: Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:14:57"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:15:06"}
+{"level":"error","message":"Transaction error (attempt 1/3): Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:15:21"}
+{"level":"error","message":"Transaction error (attempt 2/3): Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:15:28"}
+{"level":"error","message":"Transaction error (attempt 3/3): Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:15:40"}
+{"level":"error","message":"Error updating comment: Comment not found","service":"pulih-hati-backend","timestamp":"2025-06-12 05:15:41"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:17:44"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 05:17:44"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:18:09"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:18:37"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 05:18:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:19:17"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:21:34"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 05:36:24"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:36:35"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:39:44"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:40:54"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-12 05:40:55"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:41:32"}
+{"level":"error","message":"Auth middleware error: jwt must be provided","service":"pulih-hati-backend","timestamp":"2025-06-12 05:47:01"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 05:54:55"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:58:58"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 06:04:08"}

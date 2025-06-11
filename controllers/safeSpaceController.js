@@ -807,6 +807,19 @@ exports.addComment = async (req, res) => {
       const post = postCheck.rows[0];
       const postAuthorId = post.author_id;
 
+      // Check for duplicate comments (same user, same post, same content within last 30 seconds)
+      const duplicateCheck = await client.query(`
+        SELECT id FROM "pulihHati".post_comments
+        WHERE post_id = $1 AND author_id = $2 AND content = $3
+        AND created_at > NOW() - INTERVAL '30 seconds'
+        LIMIT 1
+      `, [postId, userId, content]);
+
+      if (duplicateCheck.rows.length > 0) {
+        logger.warn(`Duplicate comment detected for user ${userId} on post ${postId}`);
+        throw new Error('Duplicate comment detected. Please wait before commenting again.');
+      }
+
       // Add comment to post_comments table
       const commentResult = await client.query(`
         INSERT INTO "pulihHati".post_comments (post_id, author_id, content)
@@ -876,6 +889,10 @@ exports.addComment = async (req, res) => {
 
     if (error.message === 'Post not found') {
       return res.status(404).json({ message: 'Post not found' });
+    }
+
+    if (error.message.includes('Duplicate comment detected')) {
+      return res.status(429).json({ message: error.message });
     }
 
     return res.status(500).json({ message: 'Failed to add comment. Please try again.' });

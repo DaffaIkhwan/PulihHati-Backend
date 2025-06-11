@@ -1,4 +1,5 @@
 // Absolute minimal test endpoint for Vercel
 module.exports = (req, res) => {
-  res.status(200).json({ message: 'Hello from Vercel!' });
+  res.setHeader('Content-Type', 'application/json');
+  res.status(200).end('{"message":"Hello from Vercel!","status":"ok"}');
 };

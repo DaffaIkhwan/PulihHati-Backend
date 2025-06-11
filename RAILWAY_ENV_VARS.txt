@@ -1,0 +1,9 @@
+Environment Variables untuk Railway:
+
+NODE_ENV=production
+JWT_SECRET=pulih-hati-super-secret-key-for-production-2024-very-long-and-secure
+JWT_EXPIRE=30d
+PORT=3000
+
+# Copy paste satu per satu ke Railway dashboard
+# Setelah deploy, masuk ke Variables tab dan tambahkan satu per satu

@@ -27824,3 +27824,15 @@
 {"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:39:24"}
 {"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:39:24"}
 {"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:39:24"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:51"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:51"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:53"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:40:54"}

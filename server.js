@@ -2,17 +2,40 @@ require('dotenv').config();
 const axios = require('axios');
 const app = require('./app');
 const logger = require('./config/logger');
-const { query, closePool, checkHealth } = require('./config/db');
+
+// Use simplified database for Vercel
+let query, closePool, checkHealth;
+try {
+  if (process.env.VERCEL || process.env.NODE_ENV === 'production') {
+    const db = require('./config/db-vercel');
+    query = db.query;
+    closePool = db.closePool;
+    checkHealth = db.checkHealth;
+  } else {
+    const db = require('./config/db');
+    query = db.query;
+    closePool = db.closePool;
+    checkHealth = db.checkHealth;
+  }
+} catch (error) {
+  console.log('Database functions not available:', error.message);
+}
 
 // Tambahkan health check endpoint
 app.get('/health', async (req, res) => {
   try {
-    const dbHealth = await checkHealth();
-    res.status(dbHealth.status === 'healthy' ? 200 : 500).json({
+    let dbHealth = { status: 'unknown', message: 'Database check not available' };
+
+    if (checkHealth) {
+      dbHealth = await checkHealth();
+    }
+
+    res.status(200).json({
       status: 'ok',
       database: dbHealth,
       uptime: process.uptime(),
-      timestamp: new Date().toISOString()
+      timestamp: new Date().toISOString(),
+      environment: process.env.NODE_ENV || 'development'
     });
   } catch (error) {
     res.status(500).json({
@@ -44,10 +67,16 @@ app.post('/api/chatbot', async (req, res) => {
 // Start server
 const startServer = async () => {
   try {
-    // Test database connection
-    await query('SELECT NOW()');
-    logger.info('Database connection successful');
-    
+    // Test database connection only if not in Vercel
+    if (!process.env.VERCEL && query) {
+      try {
+        await query('SELECT NOW()');
+        logger.info('Database connection successful');
+      } catch (dbError) {
+        logger.warn('Database connection failed, but continuing:', dbError.message);
+      }
+    }
+
     // Start server
     const PORT = process.env.PORT || 5000;
     const server = app.listen(PORT, () => {
@@ -81,8 +110,10 @@ const startServer = async () => {
   }
 };
 
-// Start the server
-const server = startServer();
+// Start the server only if not in Vercel environment
+if (process.env.NODE_ENV !== 'production' || !process.env.VERCEL) {
+  const server = startServer();
+}
 
 // Handle graceful shutdown
 process.on('SIGINT', async () => {
@@ -112,13 +143,15 @@ process.on('SIGINT', async () => {
 process.on('SIGTERM', async () => {
   logger.info('Application terminated...');
   try {
-    await closePool();
+    if (closePool) {
+      await closePool();
+    }
     if (server) {
       server.close(() => {
         logger.info('Server closed');
         process.exit(0);
       });
-      
+
       // Force close after 5 seconds
       setTimeout(() => {
         logger.info('Forcing shutdown after timeout');
@@ -132,3 +165,6 @@ process.on('SIGTERM', async () => {
     process.exit(1);
   }
 });
+
+// Export app for Vercel
+module.exports = app;

@@ -4,9 +4,11 @@
 
 ### 1. **Prepare Backend for Vercel**
 
-✅ **Files Added:**
-- `vercel.json` - Vercel configuration
-- `api/index.js` - Vercel API entry point
+✅ **Files Added/Modified:**
+- `vercel.json` - Vercel configuration (simplified)
+- `config/db-vercel.js` - Simplified database config for serverless
+- `server.js` - Updated for Vercel compatibility
+- `test-vercel-deployment.cjs` - Deployment testing script
 
 ### 2. **Deploy to Vercel**
 

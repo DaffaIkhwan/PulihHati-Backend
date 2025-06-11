@@ -223,7 +223,8 @@ class Mood {
 
     logger.info(`Formatting mood chart data. Received ${moodEntries.length} entries`);
 
-    // Generate last 7 days
+    // Generate last 7 days (6 days ago to today)
+    // i=6 means 6 days ago (leftmost), i=0 means today (rightmost)
     for (let i = 6; i >= 0; i--) {
       const date = new Date(today);
       date.setDate(date.getDate() - i);
@@ -237,6 +238,9 @@ class Mood {
       // Get correct day name using JavaScript getDay()
       const dayIndex = date.getDay(); // 0=Minggu, 1=Senin, dst
       const dayName = dayNames[dayIndex];
+
+      // Check if this is today
+      const isToday = i === 0;
 
       // Find mood entry for this date with better matching
       const moodEntry = moodEntries.find(entry => {
@@ -263,16 +267,17 @@ class Mood {
         mood: moodEntry ? moodEntry.mood_level : null,
         emoji: moodEntry ? moodEntry.mood_emoji : null,
         label: moodEntry ? moodEntry.mood_label : null,
-        hasEntry: !!moodEntry
+        hasEntry: !!moodEntry,
+        isToday: isToday
       };
 
       result.push(chartItem);
 
-      // Optional: Log chart data for debugging (remove in production)
-      // logger.info(`Chart day ${i}: ${dateStr} (${dayName}) - Mood: ${chartItem.mood}, HasEntry: ${chartItem.hasEntry}`);
+      // Log chart data for debugging
+      logger.info(`Chart day ${i}: ${dateStr} (${dayName}) - Mood: ${chartItem.mood}, HasEntry: ${chartItem.hasEntry}, IsToday: ${isToday}`);
     }
 
-    logger.info(`Formatted chart data:`, result);
+    logger.info(`Formatted chart data (${result.length} days):`, result.map(r => `${r.day}(${r.date.split('-')[2]})`).join(' -> '));
     return result;
   }
 }

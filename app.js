@@ -24,8 +24,12 @@ const allowedOrigins = [
   'http://localhost:5173',
   'https://localhost:3000',
   'https://localhost:5173',
-  // Add your deployed frontend URLs here
+  // ACTUAL VERCEL FRONTEND URL
   'https://pulih-hati-frontend.vercel.app',
+  // Other Vercel variations
+  'https://pulih-hati-frontend-git-main.vercel.app',
+  'https://pulih-hati-frontend-daffaikhwans-projects.vercel.app',
+  // Other platforms (backup)
   'https://pulih-hati-frontend.netlify.app',
   'https://pulih-hati-frontend.onrender.com',
   'https://pulih-hati-frontend.up.railway.app'
@@ -38,11 +42,17 @@ if (process.env.FRONTEND_URL) {
 
 const corsOptions = {
   origin: function (origin, callback) {
+    console.log(`🔍 CORS Check - Origin: ${origin}`);
+
     // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) return callback(null, true);
+    if (!origin) {
+      console.log('✅ CORS: Allowing request with no origin');
+      return callback(null, true);
+    }
 
     // Check if origin is in allowed list
     if (allowedOrigins.includes(origin)) {
+      console.log(`✅ CORS: Origin found in allowed list: ${origin}`);
       return callback(null, true);
     }
 
@@ -58,12 +68,14 @@ const corsOptions = {
 
     for (const pattern of allowedPatterns) {
       if (pattern.test(origin)) {
+        console.log(`✅ CORS: Origin matches pattern ${pattern}: ${origin}`);
         return callback(null, true);
       }
     }
 
     // Log rejected origins for debugging
-    console.log(`CORS: Rejected origin: ${origin}`);
+    console.log(`❌ CORS: Rejected origin: ${origin}`);
+    console.log(`📋 CORS: Allowed origins:`, allowedOrigins);
     callback(new Error('Not allowed by CORS'));
   },
   credentials: true,

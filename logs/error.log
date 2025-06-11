@@ -1103,3 +1103,11 @@
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:20:55"}
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:21:10"}
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:21:24"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"error","message":"Server error: listen EADDRINUSE: address already in use :::5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:18"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}

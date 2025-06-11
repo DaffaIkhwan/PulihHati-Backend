@@ -1,18 +1,27 @@
-// Vercel serverless function entry point
-try {
-  const app = require('../app');
+// Simplified Vercel serverless function entry point
+module.exports = (req, res) => {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
 
-  // Export the Express app as a serverless function
-  module.exports = app;
-} catch (error) {
-  console.error('Error loading app:', error);
+  // Handle preflight requests
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
 
-  // Fallback handler
-  module.exports = (req, res) => {
-    res.status(500).json({
-      error: 'Server initialization failed',
-      message: error.message,
-      timestamp: new Date().toISOString()
-    });
-  };
-}
+  // Simple API info response
+  res.status(200).json({
+    message: 'PulihHati Backend API - Simplified Vercel Version',
+    version: '1.0.0',
+    status: 'running',
+    timestamp: new Date().toISOString(),
+    note: 'This is a simplified version for Vercel deployment testing',
+    availableEndpoints: {
+      health: '/api/health',
+      test: '/api/test',
+      main: '/api'
+    }
+  });
+};

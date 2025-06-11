@@ -27644,3 +27644,123 @@
 {"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-11 18:22:44"}
 {"0":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-08","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-09","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-10","day":"Sel","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"6":{"date":"2025-06-11","day":"Rab","emoji":"😊","hasEntry":true,"label":"Sangat Baik","mood":1},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-11 18:22:44"}
 {"level":"info","message":"User found with ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:22:44"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:15"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:15"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:17"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:18"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:24:18"}
+{"level":"info","message":"Finding user by ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:42"}
+{"level":"info","message":"Finding user by ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:42"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"User found with ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Cache miss for key: posts:8:1:10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Cache miss - Fetching posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"User found with ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Fetching weekly mood history for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Fetching last 7 days mood data for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Date range: 2025-06-05 to 2025-06-11","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:43"}
+{"level":"info","message":"Cached data for key: posts:8:1:10 (expires in 120s)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Returning 10 posts (cached for 2 minutes)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Finding user by ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Found 2 mood entries in last 7 days for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Mood entry found: 2025-06-09 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Mood entry found: 2025-06-10 - Level 1 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"User found with ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Cache hit for key: posts:8:1:10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"Cache hit for posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:48"}
+{"level":"info","message":"✅ Today's entry exists: 2025-06-11 - Level 1","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"0":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-08","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-09","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-10","day":"Sel","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"6":{"date":"2025-06-11","day":"Rab","emoji":"😊","hasEntry":true,"label":"Sangat Baik","mood":1},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Finding user by ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Cache hit for key: public_posts:1:10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Cache hit for public posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Cache hit for key: public_posts:1:10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Cache hit for public posts page 1, limit 10","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"User found with ID: 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Fetching weekly mood history for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Fetching last 7 days mood data for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Date range: 2025-06-05 to 2025-06-11","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Found 2 mood entries in last 7 days for user 8","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Mood entry found: 2025-06-09 - Level 5 (😄)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Mood entry found: 2025-06-10 - Level 1 (😊)","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"✅ Today's entry exists: 2025-06-11 - Level 1","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Formatting mood chart data. Received 2 entries","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"0":{"date":"2025-06-05","day":"Kam","emoji":null,"hasEntry":false,"label":null,"mood":null},"1":{"date":"2025-06-06","day":"Jum","emoji":null,"hasEntry":false,"label":null,"mood":null},"2":{"date":"2025-06-07","day":"Sab","emoji":null,"hasEntry":false,"label":null,"mood":null},"3":{"date":"2025-06-08","day":"Min","emoji":null,"hasEntry":false,"label":null,"mood":null},"4":{"date":"2025-06-09","day":"Sen","emoji":null,"hasEntry":false,"label":null,"mood":null},"5":{"date":"2025-06-10","day":"Sel","emoji":"😄","hasEntry":true,"label":"Sangat Bahagia","mood":5},"6":{"date":"2025-06-11","day":"Rab","emoji":"😊","hasEntry":true,"label":"Sangat Baik","mood":1},"level":"info","message":"Formatted chart data:","service":"pulih-hati-backend","timestamp":"2025-06-11 18:25:49"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:30"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:30"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:32"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:32"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:32"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:33"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:49"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:49"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:50"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:50"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:50"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:28:51"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:08"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:08"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:10"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:10"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:10"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:11"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:29"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:29"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:30"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:31"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:31"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:36"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:36"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:37"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:37"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:38"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:39"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:39"}
+{"level":"info","message":"Creating new database connection pool...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:48"}
+{"level":"info","message":"Database connection info: user=PulihHati_yousource, host=8tqyk.h.filess.io, database=PulihHati_yousource, port=5433","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:48"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:49"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"Attempting to reconnect to Redis...","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"warn","message":"Redis connection failed after 3 attempts, using memory cache instead","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"Falling back to in-memory cache","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"New client connected to PostgreSQL","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"Database connection successful","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}
+{"level":"info","message":"Server running in development mode on port 5000","service":"pulih-hati-backend","timestamp":"2025-06-11 18:29:50"}

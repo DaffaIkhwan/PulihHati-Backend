@@ -53,7 +53,7 @@ app.post('/api/chatbot', async (req, res) => {
 
   try {
     const response = await axios.post(
-      'https://8ead-34-125-160-61.ngrok-free.app/chat',  // ganti jika URL ngrok kamu berubah
+      'https://flaskchatbotmodel-production-11a7.up.railway.app/chat',  // ganti jika URL ngrok kamu berubah
       { message: userMessage }
     );
 

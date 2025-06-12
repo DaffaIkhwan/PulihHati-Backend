@@ -52,20 +52,44 @@ app.get('/health', async (req, res) => {
   }
 });
 
-// Proxy ke chatbot Flask
+// Proxy ke chatbot Flask dengan session management
 app.post('/api/chatbot', async (req, res) => {
-  const userMessage = req.body.message;
+  const { message, sessionId } = req.body;
+
+  // Generate session ID jika tidak ada (untuk user yang tidak login)
+  const userSessionId = sessionId || `guest_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 
   try {
     const response = await axios.post(
-      'https://flaskchatbotmodelv2-production.up.railway.app/chat',  // ganti jika URL ngrok kamu berubah
-      { message: userMessage }
+      'https://flaskchatbotmodelv2-production.up.railway.app/chat',
+      {
+        message: message,
+        session_id: userSessionId,
+        user_id: req.user?.id || null // Jika user login, kirim user ID
+      }
     );
 
-    res.json({ reply: response.data.response });
+    res.json({
+      reply: response.data.response,
+      sessionId: userSessionId
+    });
   } catch (error) {
     logger.error(`Gagal menghubungi chatbot Flask: ${error.message}`);
-    res.status(500).json({ error: 'Gagal menghubungi chatbot Flask.' });
+
+    // Fallback ke response sederhana jika Flask tidak tersedia
+    const fallbackResponses = [
+      "Maaf, saya sedang mengalami gangguan. Silakan coba lagi dalam beberapa saat.",
+      "Terima kasih sudah menghubungi saya. Saat ini sistem sedang dalam pemeliharaan.",
+      "Saya akan segera kembali untuk membantu Anda. Mohon bersabar ya!"
+    ];
+
+    const fallbackReply = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+
+    res.json({
+      reply: fallbackReply,
+      sessionId: userSessionId,
+      fallback: true
+    });
   }
 });
 

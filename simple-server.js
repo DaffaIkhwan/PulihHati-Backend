@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const axios = require('axios');
 
 const app = express();
 
@@ -161,8 +162,51 @@ app.get('/api/safespace/posts/public', (req, res) => {
       liked: false
     }
   ];
-  
+
   res.json(mockPosts);
+});
+
+// Chatbot endpoint with session management
+app.post('/api/chatbot', async (req, res) => {
+  const { message, sessionId } = req.body;
+
+  // Generate session ID jika tidak ada (untuk user yang tidak login)
+  const userSessionId = sessionId || `guest_${Date.now()}_${Math.random().toString(36).substring(2, 11)}`;
+
+  try {
+    const response = await axios.post(
+      'https://flaskchatbotmodelv2-production.up.railway.app/chat',
+      {
+        message: message,
+        session_id: userSessionId,
+        user_id: null // Simple server tidak ada user auth
+      }
+    );
+
+    res.json({
+      reply: response.data.response,
+      sessionId: userSessionId
+    });
+  } catch (error) {
+    console.error(`Gagal menghubungi chatbot Flask: ${error.message}`);
+
+    // Fallback ke response sederhana jika Flask tidak tersedia
+    const fallbackResponses = [
+      "Maaf, saya sedang mengalami gangguan. Silakan coba lagi dalam beberapa saat.",
+      "Terima kasih sudah menghubungi saya. Saat ini sistem sedang dalam pemeliharaan.",
+      "Saya akan segera kembali untuk membantu Anda. Mohon bersabar ya!",
+      "Hai! Saya adalah chatbot Pulih Hati. Bagaimana perasaan Anda hari ini?",
+      "Saya di sini untuk mendengarkan Anda. Ceritakan apa yang sedang Anda rasakan."
+    ];
+
+    const fallbackReply = fallbackResponses[Math.floor(Math.random() * fallbackResponses.length)];
+
+    res.json({
+      reply: fallbackReply,
+      sessionId: userSessionId,
+      fallback: true
+    });
+  }
 });
 
 const PORT = process.env.PORT || 5000;
@@ -173,5 +217,6 @@ app.listen(PORT, () => {
   console.log(`Register: POST http://localhost:${PORT}/api/auth/register`);
   console.log(`Login: POST http://localhost:${PORT}/api/auth/login`);
   console.log(`SafeSpace Posts: GET http://localhost:${PORT}/api/safespace/posts/public`);
+  console.log(`Chatbot: POST http://localhost:${PORT}/api/chatbot`);
   console.log('Backend is ready to receive requests!');
 });

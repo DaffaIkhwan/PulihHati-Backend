@@ -2,6 +2,11 @@ require('dotenv').config();
 const axios = require('axios');
 const app = require('./app');
 const logger = require('./config/logger');
+const swaggerUi = require('swagger-ui-express');
+const YAML = require('yamljs');
+const swaggerDocument = YAML.load('./docs/swagger.yaml');
+
+app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // Use simplified database for Vercel
 let query, closePool, checkHealth;

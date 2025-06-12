@@ -1,0 +1,1274 @@
+openapi: 3.0.0
+info:
+  title: PulihHati API
+  description: API for mental health application Pulih Hati with authentication, chatbot, mood tracking, and safe space features
+  version: 1.0.0
+servers:
+  - url: http://localhost:5000/api
+    description: Development server
+  - url: https://api.mentalhealthapp.com/api
+    description: Production server
+tags:
+  - name: Authentication
+    description: User registration and authentication
+  - name: Chatbot
+    description: AI chatbot interactions
+  - name: Mood Tracking
+    description: Mood entries and statistics
+  - name: Notifications
+    description: User notifications
+  - name: Safe Space
+    description: Community posts and interactions
+  - name: Uploads
+    description: Profile picture uploads
+  - name: Users
+    description: User management
+paths:
+  /auth/register:
+    post:
+      tags: [Authentication]
+      summary: Register a new user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - name
+                - email
+                - password
+              properties:
+                name:
+                  type: string
+                  example: John Doe
+                email:
+                  type: string
+                  format: email
+                  example: user@example.com
+                password:
+                  type: string
+                  format: password
+                  minLength: 6
+                  example: password123
+      responses:
+        '201':
+          description: User registered successfully
+        '400':
+          description: Invalid input data
+
+  /auth/login:
+    post:
+      tags: [Authentication]
+      summary: Login a user
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - email
+                - password
+              properties:
+                email:
+                  type: string
+                  format: email
+                  example: user@example.com
+                password:
+                  type: string
+                  format: password
+                  example: password123
+      responses:
+        '200':
+          description: User logged in successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  token:
+                    type: string
+                    example: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...
+        '400':
+          description: Invalid credentials
+
+  /auth/me:
+    get:
+      tags: [Authentication]
+      summary: Get current user profile
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Current user data
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 5f8d0d55b54764421b7156da
+                  name:
+                    type: string
+                    example: John Doe
+                  email:
+                    type: string
+                    example: user@example.com
+        '401':
+          description: Not authenticated
+
+  /auth/profile:
+    put:
+      tags: [Authentication]
+      summary: Update current user profile
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Name
+                email:
+                  type: string
+                  format: email
+                  example: updated@example.com
+                password:
+                  type: string
+                  format: password
+                  example: newpassword123
+      responses:
+        '200':
+          description: Profile updated successfully
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+
+  /chatbot/message:
+    post:
+      tags: [Chatbot]
+      summary: Send message to chatbot
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - message
+              properties:
+                message:
+                  type: string
+                  example: How are you feeling today?
+                sessionId:
+                  type: string
+                  example: 5f8d0d55b54764421b7156db
+      responses:
+        '200':
+          description: Chatbot response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  response:
+                    type: string
+                    example: I'm here to help you. Can you tell me more about how you're feeling?
+                  sessionId:
+                    type: string
+                    example: 5f8d0d55b54764421b7156db
+        '401':
+          description: Not authenticated
+
+  /chatbot/sessions:
+    get:
+      tags: [Chatbot]
+      summary: Get all chatbot sessions for current user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of sessions
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 5f8d0d55b54764421b7156db
+                    createdAt:
+                      type: string
+                      format: date-time
+                      example: 2023-10-15T12:00:00Z
+                    updatedAt:
+                      type: string
+                      format: date-time
+                      example: 2023-10-15T12:30:00Z
+        '401':
+          description: Not authenticated
+
+  /chatbot/sessions/{id}:
+    get:
+      tags: [Chatbot]
+      summary: Get a specific chatbot session by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Session ID
+      responses:
+        '200':
+          description: Session details with messages
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 5f8d0d55b54764421b7156db
+                  messages:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        sender:
+                          type: string
+                          enum: [user, bot]
+                          example: user
+                        content:
+                          type: string
+                          example: How are you feeling today?
+                        timestamp:
+                          type: string
+                          format: date-time
+                          example: 2023-10-15T12:00:00Z
+        '401':
+          description: Not authenticated
+        '404':
+          description: Session not found
+
+  /mood/types:
+    get:
+      tags: [Mood Tracking]
+      summary: Get available mood types
+      responses:
+        '200':
+          description: List of mood types
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 5f8d0d55b54764421b7156dc
+                    name:
+                      type: string
+                      example: Happy
+                    emoji:
+                      type: string
+                      example: 😊
+                    color:
+                      type: string
+                      example: #FFD700
+
+  /mood/entry:
+    post:
+      tags: [Mood Tracking]
+      summary: Save or update mood entry
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - moodTypeId
+              properties:
+                moodTypeId:
+                  type: string
+                  example: 5f8d0d55b54764421b7156dc
+                notes:
+                  type: string
+                  example: Feeling great after a good workout
+                date:
+                  type: string
+                  format: date
+                  example: 2023-10-15
+      responses:
+        '200':
+          description: Mood entry saved
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 5f8d0d55b54764421b7156dd
+                  moodType:
+                    $ref: '#/components/schemas/MoodType'
+                  notes:
+                    type: string
+                    example: Feeling great after a good workout
+                  date:
+                    type: string
+                    format: date
+                    example: 2023-10-15
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+
+  /mood/today:
+    get:
+      tags: [Mood Tracking]
+      summary: Get today's mood entry
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Today's mood entry
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  id:
+                    type: string
+                    example: 5f8d0d55b54764421b7156dd
+                  moodType:
+                    $ref: '#/components/schemas/MoodType'
+                  notes:
+                    type: string
+                    example: Feeling great after a good workout
+                  date:
+                    type: string
+                    format: date
+                    example: 2023-10-15
+        '404':
+          description: No mood entry for today
+        '401':
+          description: Not authenticated
+
+  /mood/history/week:
+    get:
+      tags: [Mood Tracking]
+      summary: Get mood history for last 7 days
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Weekly mood history
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date
+                      example: 2023-10-15
+                    moodType:
+                      $ref: '#/components/schemas/MoodType'
+                    notes:
+                      type: string
+                      example: Feeling great after a good workout
+        '401':
+          description: Not authenticated
+
+  /mood/history:
+    get:
+      tags: [Mood Tracking]
+      summary: Get mood history for custom date range
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: query
+          name: startDate
+          schema:
+            type: string
+            format: date
+          description: Start date (YYYY-MM-DD)
+        - in: query
+          name: endDate
+          schema:
+            type: string
+            format: date
+          description: End date (YYYY-MM-DD)
+      responses:
+        '200':
+          description: Mood history for date range
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    date:
+                      type: string
+                      format: date
+                      example: 2023-10-15
+                    moodType:
+                      $ref: '#/components/schemas/MoodType'
+                    notes:
+                      type: string
+                      example: Feeling great after a good workout
+        '400':
+          description: Invalid date range
+        '401':
+          description: Not authenticated
+
+  /mood/stats:
+    get:
+      tags: [Mood Tracking]
+      summary: Get mood statistics
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Mood statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  mostCommonMood:
+                    $ref: '#/components/schemas/MoodType'
+                  averageMoodScore:
+                    type: number
+                    format: float
+                    example: 7.5
+                  streakDays:
+                    type: integer
+                    example: 5
+        '401':
+          description: Not authenticated
+
+  /mood/entry/{id}:
+    delete:
+      tags: [Mood Tracking]
+      summary: Delete a mood entry
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Mood entry ID
+      responses:
+        '200':
+          description: Mood entry deleted
+        '401':
+          description: Not authenticated
+        '404':
+          description: Mood entry not found
+
+  /notifications:
+    get:
+      tags: [Notifications]
+      summary: Get all notifications for current user
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of notifications
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    id:
+                      type: string
+                      example: 5f8d0d55b54764421b7156de
+                    message:
+                      type: string
+                      example: You have a new message
+                    isRead:
+                      type: boolean
+                      example: false
+                    createdAt:
+                      type: string
+                      format: date-time
+                      example: 2023-10-15T12:00:00Z
+        '401':
+          description: Not authenticated
+
+  /notifications/unread-count:
+    get:
+      tags: [Notifications]
+      summary: Get count of unread notifications
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Unread notifications count
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  count:
+                    type: integer
+                    example: 3
+        '401':
+          description: Not authenticated
+
+  /notifications/{id}/read:
+    put:
+      tags: [Notifications]
+      summary: Mark a notification as read
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Notification ID
+      responses:
+        '200':
+          description: Notification marked as read
+        '401':
+          description: Not authenticated
+        '404':
+          description: Notification not found
+
+  /notifications/mark-all-read:
+    put:
+      tags: [Notifications]
+      summary: Mark all notifications as read
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: All notifications marked as read
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  updatedCount:
+                    type: integer
+                    example: 5
+        '401':
+          description: Not authenticated
+
+  /safe-space/posts/public:
+    get:
+      tags: [Safe Space]
+      summary: Get all public posts (read-only)
+      responses:
+        '200':
+          description: List of public posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+
+  /safe-space/posts:
+    get:
+      tags: [Safe Space]
+      summary: Get all posts (authenticated)
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+        '401':
+          description: Not authenticated
+
+    post:
+      tags: [Safe Space]
+      summary: Create a new post
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                  example: This is my first post in the safe space
+                isAnonymous:
+                  type: boolean
+                  example: false
+      responses:
+        '201':
+          description: Post created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+
+  /safe-space/posts/{id}/public:
+    get:
+      tags: [Safe Space]
+      summary: Get a single public post by ID (read-only)
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: Public post details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '404':
+          description: Post not found
+
+  /safe-space/posts/{id}:
+    get:
+      tags: [Safe Space]
+      summary: Get a single post by ID (authenticated)
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: Post details
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '401':
+          description: Not authenticated
+        '404':
+          description: Post not found
+
+    put:
+      tags: [Safe Space]
+      summary: Update a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                  example: Updated post content
+                isAnonymous:
+                  type: boolean
+                  example: true
+      responses:
+        '200':
+          description: Post updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Post'
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated or not authorized
+        '404':
+          description: Post not found
+
+    delete:
+      tags: [Safe Space]
+      summary: Delete a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: Post deleted
+        '401':
+          description: Not authenticated or not authorized
+        '404':
+          description: Post not found
+
+  /safe-space/posts/{id}/like:
+    put:
+      tags: [Safe Space]
+      summary: Like or unlike a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: Like status updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  likesCount:
+                    type: integer
+                    example: 5
+                  isLiked:
+                    type: boolean
+                    example: true
+        '401':
+          description: Not authenticated
+        '404':
+          description: Post not found
+
+  /safe-space/posts/{id}/comments:
+    get:
+      tags: [Safe Space]
+      summary: Get comments for a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: List of comments
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Comment'
+        '401':
+          description: Not authenticated
+        '404':
+          description: Post not found
+
+    post:
+      tags: [Safe Space]
+      summary: Add a comment to a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              required:
+                - content
+              properties:
+                content:
+                  type: string
+                  example: This is a great post!
+                isAnonymous:
+                  type: boolean
+                  example: false
+      responses:
+        '201':
+          description: Comment added
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+        '404':
+          description: Post not found
+
+  /safe-space/comments/{id}:
+    put:
+      tags: [Safe Space]
+      summary: Update a comment
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Comment ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                content:
+                  type: string
+                  example: Updated comment content
+      responses:
+        '200':
+          description: Comment updated
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Comment'
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated or not authorized
+        '404':
+          description: Comment not found
+
+    delete:
+      tags: [Safe Space]
+      summary: Delete a comment
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Comment ID
+      responses:
+        '200':
+          description: Comment deleted
+        '401':
+          description: Not authenticated or not authorized
+        '404':
+          description: Comment not found
+
+  /safe-space/posts/{id}/bookmark:
+    put:
+      tags: [Safe Space]
+      summary: Toggle bookmark on a post
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: Post ID
+      responses:
+        '200':
+          description: Bookmark status updated
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  isBookmarked:
+                    type: boolean
+                    example: true
+        '401':
+          description: Not authenticated
+        '404':
+          description: Post not found
+
+  /safe-space/bookmarks:
+    get:
+      tags: [Safe Space]
+      summary: Get bookmarked posts
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of bookmarked posts
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Post'
+        '401':
+          description: Not authenticated
+
+  /upload/avatar:
+    post:
+      tags: [Uploads]
+      summary: Upload profile avatar
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                avatar:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Avatar uploaded successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  avatarUrl:
+                    type: string
+                    example: /uploads/avatars/user123.jpg
+        '400':
+          description: No file uploaded or invalid file type
+        '401':
+          description: Not authenticated
+
+    delete:
+      tags: [Uploads]
+      summary: Delete profile avatar
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Avatar deleted
+        '401':
+          description: Not authenticated
+
+  /upload/profile-stats:
+    get:
+      tags: [Uploads]
+      summary: Get profile statistics
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: Profile statistics
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  postCount:
+                    type: integer
+                    example: 15
+                  commentCount:
+                    type: integer
+                    example: 42
+                  moodEntriesCount:
+                    type: integer
+                    example: 30
+        '401':
+          description: Not authenticated
+
+  /users:
+    get:
+      tags: [Users]
+      summary: Get all users (admin only)
+      security:
+        - bearerAuth: []
+      responses:
+        '200':
+          description: List of users
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/User'
+        '401':
+          description: Not authenticated
+        '403':
+          description: Not authorized (admin only)
+
+  /users/profile:
+    put:
+      tags: [Users]
+      summary: Update current user profile
+      security:
+        - bearerAuth: []
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Updated Name
+                email:
+                  type: string
+                  format: email
+                  example: updated@example.com
+                password:
+                  type: string
+                  format: password
+                  example: newpassword123
+      responses:
+        '200':
+          description: Profile updated successfully
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+
+  /users/{id}:
+    get:
+      tags: [Users]
+      summary: Get user by ID
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: User ID
+      responses:
+        '200':
+          description: User data
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/User'
+        '401':
+          description: Not authenticated
+        '404':
+          description: User not found
+
+    put:
+      tags: [Users]
+      summary: Update user (admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: User ID
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                name:
+                  type: string
+                  example: Admin Updated Name
+                email:
+                  type: string
+                  format: email
+                  example: adminupdated@example.com
+                role:
+                  type: string
+                  enum: [user, admin]
+                  example: admin
+      responses:
+        '200':
+          description: User updated
+        '400':
+          description: Invalid input data
+        '401':
+          description: Not authenticated
+        '403':
+          description: Not authorized (admin only)
+        '404':
+          description: User not found
+
+    delete:
+      tags: [Users]
+      summary: Delete user (admin only)
+      security:
+        - bearerAuth: []
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema:
+            type: string
+          description: User ID
+      responses:
+        '200':
+          description: User deleted
+        '401':
+          description: Not authenticated
+        '403':
+          description: Not authorized (admin only)
+        '404':
+          description: User not found
+
+components:
+  schemas:
+    User:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5f8d0d55b54764421b7156da
+        name:
+          type: string
+          example: John Doe
+        email:
+          type: string
+          format: email
+          example: user@example.com
+        role:
+          type: string
+          enum: [user, admin]
+          example: user
+        avatar:
+          type: string
+          example: /uploads/avatars/user123.jpg
+        createdAt:
+          type: string
+          format: date-time
+          example: 2023-10-15T12:00:00Z
+
+    MoodType:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5f8d0d55b54764421b7156dc
+        name:
+          type: string
+          example: Happy
+        emoji:
+          type: string
+          example: 😊
+        color:
+          type: string
+          example: #FFD700
+
+    Post:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5f8d0d55b54764421b7156df
+        content:
+          type: string
+          example: This is a post in the safe space
+        author:
+          $ref: '#/components/schemas/User'
+        isAnonymous:
+          type: boolean
+          example: false
+        likesCount:
+          type: integer
+          example: 5
+        commentsCount:
+          type: integer
+          example: 2
+        isLiked:
+          type: boolean
+          example: true
+        isBookmarked:
+          type: boolean
+          example: false
+        createdAt:
+          type: string
+          format: date-time
+          example: 2023-10-15T12:00:00Z
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2023-10-15T12:00:00Z
+
+    Comment:
+      type: object
+      properties:
+        id:
+          type: string
+          example: 5f8d0d55b54764421b7156e0
+        content:
+          type: string
+          example: This is a comment
+        author:
+          $ref: '#/components/schemas/User'
+        isAnonymous:
+          type: boolean
+          example: false
+        createdAt:
+          type: string
+          format: date-time
+          example: 2023-10-15T12:05:00Z
+        updatedAt:
+          type: string
+          format: date-time
+          example: 2023-10-15T12:05:00Z
+
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT

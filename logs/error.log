@@ -1379,3 +1379,11 @@
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 05:58:58"}
 {"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 06:04:08"}
 {"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 06:38:08"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 06:46:19"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 06:47:06"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 06:47:20"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 08:42:36"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 08:42:40"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 13:23:37"}
+{"level":"error","message":"Redis connection error: ","service":"pulih-hati-backend","timestamp":"2025-06-12 13:23:55"}
+{"level":"error","message":"Error closing pool: Called end on pool more than once","service":"pulih-hati-backend","timestamp":"2025-06-12 13:26:17"}

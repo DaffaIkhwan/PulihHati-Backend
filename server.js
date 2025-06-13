@@ -61,7 +61,7 @@ app.post('/api/chatbot', async (req, res) => {
 
   try {
     const response = await axios.post(
-      'https://flaskchatbotmodel-production-c729.up.railway.app/chat',
+      'https://flaskchatbotmodelv2-production.up.railway.app/chat',
       {
         message: message,
         session_id: userSessionId,
